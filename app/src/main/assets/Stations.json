@@ -1,0 +1,1984 @@
+{
+  "stations": [
+    {
+      "id": 1,
+      "name": "Station 1",
+      "location": {
+        "latitude": 40.921578,
+        "longitude": 29.132091
+      },
+      "activity": ["spa", "museum", "yoga", "karaoke", "meditation"]
+    },
+    {
+      "id": 2,
+      "name": "Station 2",
+      "location": {
+        "latitude": 40.920815,
+        "longitude": 29.133482
+      },
+      "activity": ["theater", "working", "walking", "community center", "historical sites"]
+    },
+    {
+      "id": 3,
+      "name": "Station 3",
+      "location": {
+        "latitude": 40.925756,
+        "longitude": 29.131227
+      },
+      "activity": ["restaurant", "sports", "art gallery", "library", "meditation"]
+    },
+    {
+      "id": 4,
+      "name": "Station 4",
+      "location": {
+        "latitude": 40.922394,
+        "longitude": 29.135609
+      },
+      "activity": ["coffee", "bike ride", "spa", "playground", "walking"]
+    },
+    {
+      "id": 5,
+      "name": "Station 5",
+      "location": {
+        "latitude": 40.926173,
+        "longitude": 29.130584
+      },
+      "activity": ["selfcare", "meditation", "spa", "historical sites", "market"]
+    },
+    {
+      "id": 6,
+      "name": "Station 6",
+      "location": {
+        "latitude": 40.922947,
+        "longitude": 29.131977
+      },
+      "activity": ["coffee", "restaurant", "pilates", "theater", "market"]
+    },
+    {
+      "id": 7,
+      "name": "Station 7",
+      "location": {
+        "latitude": 40.921659,
+        "longitude": 29.130482
+      },
+      "activity": ["theater", "karaoke", "museum", "selfcare", "sports"]
+    },
+    {
+      "id": 8,
+      "name": "Station 8",
+      "location": {
+        "latitude": 40.924063,
+        "longitude": 29.134288
+      },
+      "activity": ["playground", "historical sites", "picnic", "market", "selfcare"]
+    },
+    {
+      "id": 9,
+      "name": "Station 9",
+      "location": {
+        "latitude": 40.925109,
+        "longitude": 29.134840
+      },
+      "activity": ["museum", "sports", "playground", "karaoke", "spa"]
+    },
+    {
+      "id": 10,
+      "name": "Station 10",
+      "location": {
+        "latitude": 40.923650,
+        "longitude": 29.133956
+      },
+      "activity": ["shopping", "restaurant", "market", "picnic", "theater"]
+    },
+    {
+      "id": 11,
+      "name": "Station 11",
+      "location": {
+        "latitude": 40.921836,
+        "longitude": 29.135280
+      },
+      "activity": ["coffee", "sports", "yoga", "pilates", "walking"]
+    },
+    {
+      "id": 12,
+      "name": "Station 12",
+      "location": {
+        "latitude": 40.924781,
+        "longitude": 29.131943
+      },
+      "activity": ["playground", "picnic", "market", "karaoke", "selfcare"]
+    },
+    {
+      "id": 13,
+      "name": "Station 13",
+      "location": {
+        "latitude": 40.926343,
+        "longitude": 29.133318
+      },
+      "activity": ["shopping", "coffee", "cinema", "theater", "market"]
+    },
+    {
+      "id": 14,
+      "name": "Station 14",
+      "location": {
+        "latitude": 40.923978,
+        "longitude": 29.134697
+      },
+      "activity": ["yoga", "cinema", "spa", "concert", "market"]
+    },
+    {
+      "id": 15,
+      "name": "Station 15",
+      "location": {
+        "latitude": 40.925420,
+        "longitude": 29.132652
+      },
+      "activity": ["shopping", "restaurant", "library", "theater", "museum"]
+    },
+    {
+      "id": 16,
+      "name": "Station 16",
+      "location": {
+        "latitude": 40.922813,
+        "longitude": 29.134213
+      },
+      "activity": ["spa", "picnic", "market", "theater", "concert"]
+    },
+    {
+      "id": 17,
+      "name": "Station 17",
+      "location": {
+        "latitude": 40.921350,
+        "longitude": 29.132829
+      },
+      "activity": ["museum", "cinema", "yoga", "library", "theater"]
+    },
+    {
+      "id": 18,
+      "name": "Station 18",
+      "location": {
+        "latitude": 40.925876,
+        "longitude": 29.131472
+      },
+      "activity": ["shopping", "restaurant", "market", "selfcare", "cinema"]
+    },
+    {
+      "id": 19,
+      "name": "Station 19",
+      "location": {
+        "latitude": 40.923247,
+        "longitude": 29.130914
+      },
+      "activity": ["coffee", "shopping", "restaurant", "theater", "picnic"]
+    },
+    {
+      "id": 20,
+      "name": "Station 20",
+      "location": {
+        "latitude": 40.925074,
+        "longitude": 29.132268
+      },
+      "activity": ["coffee", "shopping", "restaurant", "playground", "market"]
+    },
+    {
+      "id": 21,
+      "name": "Station 21",
+      "location": {
+        "latitude": 40.984587,
+        "longitude": 29.028234
+      },
+      "activity": ["coffee", "shopping", "restaurant", "library", "hair studio"]
+    },
+    {
+      "id": 22,
+      "name": "Station 22",
+      "location": {
+        "latitude": 40.986231,
+        "longitude": 29.022676
+      },
+      "activity": ["shopping", "cinema", "yoga", "market", "karaoke"]
+    },
+    {
+      "id": 23,
+      "name": "Station 23",
+      "location": {
+        "latitude": 40.983705,
+        "longitude": 29.023910
+      },
+      "activity": ["coffee", "restaurant", "playground", "fitness", "historical sites"]
+    },
+    {
+      "id": 24,
+      "name": "Station 24",
+      "location": {
+        "latitude": 40.983156,
+        "longitude": 29.021115
+      },
+      "activity": ["shopping", "cinema", "library", "picnic", "spa"]
+    },
+    {
+      "id": 25,
+      "name": "Station 25",
+      "location": {
+        "latitude": 40.985749,
+        "longitude": 29.025368
+      },
+      "activity": ["coffee", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 26,
+      "name": "Station 26",
+      "location": {
+        "latitude": 40.982803,
+        "longitude": 29.029392
+      },
+      "activity": ["coffee", "shopping", "market", "bike ride", "concert"]
+    },
+    {
+      "id": 27,
+      "name": "Station 27",
+      "location": {
+        "latitude": 40.987088,
+        "longitude": 29.023899
+      },
+      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+    },
+    {
+      "id": 28,
+      "name": "Station 28",
+      "location": {
+        "latitude": 40.981977,
+        "longitude": 29.020569
+      },
+      "activity": ["coffee", "library", "theater", "playground", "fitness"]
+    },
+    {
+      "id": 29,
+      "name": "Station 29",
+      "location": {
+        "latitude": 40.987215,
+        "longitude": 29.029096
+      },
+      "activity": ["coffee", "shopping", "restaurant", "cinema", "market"]
+    },
+    {
+      "id": 30,
+      "name": "Station 30",
+      "location": {
+        "latitude": 40.984476,
+        "longitude": 29.026098
+      },
+      "activity": ["shopping", "restaurant", "sports", "museum", "picnic"]
+    },
+    {
+      "id": 31,
+      "name": "Station 31",
+      "location": {
+        "latitude": 40.982348,
+        "longitude": 29.025267
+      },
+      "activity": ["coffee", "shopping", "library", "karaoke", "theater"]
+    },
+    {
+      "id": 32,
+      "name": "Station 32",
+      "location": {
+        "latitude": 40.987960,
+        "longitude": 29.021579
+      },
+      "activity": ["coffee", "restaurant", "picnic", "spa", "concert"]
+    },
+    {
+      "id": 33,
+      "name": "Station 33",
+      "location": {
+        "latitude": 40.982467,
+        "longitude": 29.022518
+      },
+      "activity": ["coffee", "shopping", "cinema", "karaoke", "workshop"]
+    },
+    {
+      "id": 34,
+      "name": "Station 34",
+      "location": {
+        "latitude": 40.986639,
+        "longitude": 29.027682
+      },
+      "activity": ["coffee", "restaurant", "museum", "library", "sports"]
+    },
+    {
+      "id": 35,
+      "name": "Station 35",
+      "location": {
+        "latitude": 40.982991,
+        "longitude": 29.028844
+      },
+      "activity": ["shopping", "restaurant", "theater", "spa", "market"]
+    },
+    {
+      "id": 36,
+      "name": "Station 36",
+      "location": {
+        "latitude": 40.986721,
+        "longitude": 29.025121
+      },
+      "activity": ["coffee", "shopping", "cinema", "picnic", "yoga"]
+    },
+    {
+      "id": 37,
+      "name": "Station 37",
+      "location": {
+        "latitude": 40.983922,
+        "longitude": 29.028291
+      },
+      "activity": ["shopping", "restaurant", "library", "nail studio", "theater"]
+    },
+    {
+      "id": 38,
+      "name": "Station 38",
+      "location": {
+        "latitude": 40.986385,
+        "longitude": 29.020422
+      },
+      "activity": ["coffee", "shopping", "restaurant", "fitness", "market"]
+    },
+    {
+      "id": 39,
+      "name": "Station 39",
+      "location": {
+        "latitude": 40.981509,
+        "longitude": 29.027771
+      },
+      "activity": ["coffee", "shopping", "cinema", "library", "concert"]
+    },
+    {
+      "id": 40,
+      "name": "Station 40",
+      "location": {
+        "latitude": 40.987315,
+        "longitude": 29.022718
+      },
+      "activity": ["shopping", "restaurant", "theater", "picnic", "bike ride"]
+    },
+    {
+      "id": 41,
+      "name": "Station 41",
+      "location": {
+        "latitude": 40.977836,
+        "longitude": 29.133904
+      },
+      "activity": ["coffee", "shopping", "cinema", "picnic", "theater"]
+    },
+    {
+      "id": 42,
+      "name": "Station 42",
+      "location": {
+        "latitude": 40.978686,
+        "longitude": 29.135011
+      },
+      "activity": ["shopping", "restaurant", "fitness", "market", "spa"]
+    },
+    {
+      "id": 43,
+      "name": "Station 43",
+      "location": {
+        "latitude": 40.976764,
+        "longitude": 29.132209
+      },
+      "activity": ["coffee", "sports", "playground", "bike ride", "walking"]
+    },
+    {
+      "id": 44,
+      "name": "Station 44",
+      "location": {
+        "latitude": 40.979905,
+        "longitude": 29.130893
+      },
+      "activity": ["shopping", "restaurant", "library", "museum", "theater"]
+    },
+    {
+      "id": 45,
+      "name": "Station 45",
+      "location": {
+        "latitude": 40.974931,
+        "longitude": 29.141546
+      },
+      "activity": ["coffee", "fitness", "yoga", "pilates", "spa"]
+    },
+    {
+      "id": 46,
+      "name": "Station 46",
+      "location": {
+        "latitude": 40.980669,
+        "longitude": 29.124102
+      },
+      "activity": ["coffee", "shopping", "cinema", "market", "concert"]
+    },
+    {
+      "id": 47,
+      "name": "Station 47",
+      "location": {
+        "latitude": 40.977568,
+        "longitude": 29.139091
+      },
+      "activity": ["shopping", "restaurant", "library", "workshop", "historical sites"]
+    },
+    {
+      "id": 48,
+      "name": "Station 48",
+      "location": {
+        "latitude": 40.979414,
+        "longitude": 29.118836
+      },
+      "activity": ["coffee", "sports", "walking", "fitness", "bike ride"]
+    },
+    {
+      "id": 49,
+      "name": "Station 49",
+      "location": {
+        "latitude": 40.977318,
+        "longitude": 29.144344
+      },
+      "activity": ["shopping", "restaurant", "theater", "picnic", "spa"]
+    },
+    {
+      "id": 50,
+      "name": "Station 50",
+      "location": {
+        "latitude": 40.979115,
+        "longitude": 29.127930
+      },
+      "activity": ["coffee", "shopping", "cinema", "library", "karaoke"]
+    },
+    {
+      "id": 51,
+      "name": "Station 51",
+      "location": {
+        "latitude": 40.976893,
+        "longitude": 29.125982
+      },
+      "activity": ["coffee", "restaurant", "market", "workshop", "concert"]
+    },
+    {
+      "id": 52,
+      "name": "Station 52",
+      "location": {
+        "latitude": 40.978088,
+        "longitude": 29.138049
+      },
+      "activity": ["shopping", "fitness", "playground", "museum", "spa"]
+    },
+    {
+      "id": 53,
+      "name": "Station 53",
+      "location": {
+        "latitude": 40.977254,
+        "longitude": 29.122561
+      },
+      "activity": ["coffee", "shopping", "theater", "selfcare", "workshop"]
+    },
+    {
+      "id": 54,
+      "name": "Station 54",
+      "location": {
+        "latitude": 40.978441,
+        "longitude": 29.135834
+      },
+      "activity": ["coffee", "shopping", "restaurant", "picnic", "yoga"]
+    },
+    {
+      "id": 55,
+      "name": "Station 55",
+      "location": {
+        "latitude": 40.979763,
+        "longitude": 29.130479
+      },
+      "activity": ["shopping", "cinema", "library", "market", "concert"]
+    },
+    {
+      "id": 56,
+      "name": "Station 56",
+      "location": {
+        "latitude": 40.975688,
+        "longitude": 29.124870
+      },
+      "activity": ["coffee", "restaurant", "fitness", "market", "karaoke"]
+    },
+    {
+      "id": 57,
+      "name": "Station 57",
+      "location": {
+        "latitude": 40.979600,
+        "longitude": 29.119892
+      },
+      "activity": ["shopping", "fitness", "sports", "walking", "spa"]
+    },
+    {
+      "id": 58,
+      "name": "Station 58",
+      "location": {
+        "latitude": 40.978342,
+        "longitude": 29.123499
+      },
+      "activity": ["coffee", "cinema", "theater", "library", "picnic"]
+    },
+    {
+      "id": 59,
+      "name": "Station 59",
+      "location": {
+        "latitude": 40.977237,
+        "longitude": 29.143130
+      },
+      "activity": ["coffee", "shopping", "restaurant", "market", "selfcare"]
+    },
+    {
+      "id": 60,
+      "name": "Station 60",
+      "location": {
+        "latitude": 40.979994,
+        "longitude": 29.126676
+      },
+      "activity": ["shopping", "cinema", "library", "market", "concert"]
+    },
+    {
+      "id": 61,
+      "name": "Station 61",
+      "location": {
+        "latitude": 40.976546,
+        "longitude": 29.136383
+      },
+      "activity": ["coffee", "restaurant", "playground", "market", "historical sites"]
+    },
+    {
+      "id": 62,
+      "name": "Station 62",
+      "location": {
+        "latitude": 40.979173,
+        "longitude": 29.132154
+      },
+      "activity": ["shopping", "sports", "picnic", "theater", "karaoke"]
+    },
+    {
+      "id": 63,
+      "name": "Station 63",
+      "location": {
+        "latitude": 40.978201,
+        "longitude": 29.117902
+      },
+      "activity": ["coffee", "fitness", "walking", "hair studio", "museum"]
+    },
+    {
+      "id": 64,
+      "name": "Station 64",
+      "location": {
+        "latitude": 40.979442,
+        "longitude": 29.143828
+      },
+      "activity": ["coffee", "shopping", "restaurant", "spa", "concert"]
+    },
+    {
+      "id": 65,
+      "name": "Station 65",
+      "location": {
+        "latitude": 40.977038,
+        "longitude": 29.122080
+      },
+      "activity": ["shopping", "cinema", "library", "picnic", "theater"]
+    },
+    {
+      "id": 66,
+      "name": "Station 66",
+      "location": {
+        "latitude": 40.978789,
+        "longitude": 29.125673
+      },
+      "activity": ["coffee", "restaurant", "market", "fitness", "karaoke"]
+    },
+    {
+      "id": 67,
+      "name": "Station 67",
+      "location": {
+        "latitude": 40.978017,
+        "longitude": 29.137015
+      },
+      "activity": ["shopping", "fitness", "playground", "museum", "yoga"]
+    },
+    {
+      "id": 68,
+      "name": "Station 68",
+      "location": {
+        "latitude": 40.977128,
+        "longitude": 29.118586
+      },
+      "activity": ["coffee", "sports", "walking", "hair studio", "market"]
+    },
+    {
+      "id": 69,
+      "name": "Station 69",
+      "location": {
+        "latitude": 40.978597,
+        "longitude": 29.126298
+      },
+      "activity": ["shopping", "cinema", "library", "theater", "spa"]
+    },
+    {
+      "id": 70,
+      "name": "Station 70",
+      "location": {
+        "latitude": 40.976335,
+        "longitude": 29.134256
+      },
+      "activity": ["coffee", "restaurant", "picnic", "market", "concert"]
+    },
+    {
+      "id": 71,
+      "name": "Station 71",
+      "location": {
+        "latitude": 40.979734,
+        "longitude": 29.130075
+      },
+      "activity": ["shopping", "cinema", "library", "meditation", "selfcare"]
+    },
+    {
+      "id": 72,
+      "name": "Station 72",
+      "location": {
+        "latitude": 40.976118,
+        "longitude": 29.121369
+      },
+      "activity": ["coffee", "restaurant", "theater", "picnic", "karaoke"]
+    },
+    {
+      "id": 73,
+      "name": "Station 73",
+      "location": {
+        "latitude": 40.978416,
+        "longitude": 29.138514
+      },
+      "activity": ["shopping", "fitness", "playground", "museum", "sp"]
+    },
+    {
+      "id": 74,
+      "name": "Station 74",
+      "location": {
+        "latitude": 40.977600,
+        "longitude": 29.124679
+      },
+      "activity": ["coffee", "sports", "walking", "community center", "concert"]
+    },
+    {
+      "id": 75,
+      "name": "Station 75",
+      "location": {
+        "latitude": 40.978947,
+        "longitude": 29.119275
+      },
+      "activity": ["shopping", "restaurant", "market", "selfcare", "spa"]
+    },
+    {
+      "id": 76,
+      "name": "Station 76",
+      "location": {
+        "latitude": 40.977282,
+        "longitude": 29.142045
+      },
+      "activity": ["coffee", "cinema", "library", "theater", "fitness"]
+    },
+    {
+      "id": 77,
+      "name": "Station 77",
+      "location": {
+        "latitude": 40.979513,
+        "longitude": 29.127417
+      },
+      "activity": ["shopping", "restaurant", "picnic", "museum", "concert"]
+    },
+    {
+      "id": 78,
+      "name": "Station 78",
+      "location": {
+        "latitude": 40.977837,
+        "longitude": 29.121795
+      },
+      "activity": ["coffee", "shopping", "cinema", "theater", "karaoke"]
+    },
+    {
+      "id": 79,
+      "name": "Station 79",
+      "location": {
+        "latitude": 40.978792,
+        "longitude": 29.135134
+      },
+      "activity": ["shopping", "restaurant", "library", "art gallery", "spa"]
+    },
+    {
+      "id": 80,
+      "name": "Station 80",
+      "location": {
+        "latitude": 40.975978,
+        "longitude": 29.130092
+      },
+      "activity": ["coffee", "fitness", "sports", "walking", "market"]
+    },
+    {
+      "id": 81,
+      "name": "Station 81",
+      "location": {
+        "latitude": 40.979366,
+        "longitude": 29.140340
+      },
+      "activity": ["shopping", "cinema", "theater", "selfcare", "concert"]
+    },
+    {
+      "id": 82,
+      "name": "Station 82",
+      "location": {
+        "latitude": 40.977487,
+        "longitude": 29.124203
+      },
+      "activity": ["coffee", "restaurant", "market", "hair studio", "karaoke"]
+    },
+    {
+      "id": 83,
+      "name": "Station 83",
+      "location": {
+        "latitude": 40.978839,
+        "longitude": 29.118993
+      },
+      "activity": ["shopping", "fitness", "sports", "walking", "spa"]
+    },
+    {
+      "id": 84,
+      "name": "Station 84",
+      "location": {
+        "latitude": 40.976475,
+        "longitude": 29.122890
+      },
+      "activity": ["coffee", "shopping", "cinema", "library", "market"]
+    },
+    {
+      "id": 85,
+      "name": "Station 85",
+      "location": {
+        "latitude": 40.978207,
+        "longitude": 29.139603
+      },
+      "activity": ["shopping", "restaurant", "playground", "museum", "spa"]
+    },
+    {
+      "id": 86,
+      "name": "Station 86",
+      "location": {
+        "latitude": 40.977088,
+        "longitude": 29.120469
+      },
+      "activity": ["coffee", "fitness", "walking", "fitness", "concert"]
+    },
+    {
+      "id": 87,
+      "name": "Station 87",
+      "location": {
+        "latitude": 40.979442,
+        "longitude": 29.131888
+      },
+      "activity": ["shopping", "restaurant", "library", "hair studio", "theater"]
+    },
+    {
+      "id": 88,
+      "name": "Station 88",
+      "location": {
+        "latitude": 40.976883,
+        "longitude": 29.125422
+      },
+      "activity": ["coffee", "shopping", "cinema", "picnic", "karaoke"]
+    },
+    {
+      "id": 89,
+      "name": "Station 89",
+      "location": {
+        "latitude": 40.978610,
+        "longitude": 29.137748
+      },
+      "activity": ["shopping", "restaurant", "library", "art gallery", "concert"]
+    },
+    {
+      "id": 90,
+      "name": "Station 90",
+      "location": {
+        "latitude": 40.977228,
+        "longitude": 29.123013
+      },
+      "activity": ["coffee", "sports", "theater", "market", "spa"]
+    },
+    {
+      "id": 91,
+      "name": "Station 91",
+      "location": {
+        "latitude": 40.952350,
+        "longitude": 29.118245
+      },
+      "activity": ["coffee", "shopping", "restaurant", "library", "art gallery"]
+    },
+    {
+      "id": 92,
+      "name": "Station 92",
+      "location": {
+        "latitude": 40.953789,
+        "longitude": 29.120105
+      },
+      "activity": ["shopping", "cinema", "yoga", "market", "karaoke"]
+    },
+    {
+      "id": 93,
+      "name": "Station 93",
+      "location": {
+        "latitude": 40.951498,
+        "longitude": 29.122609
+      },
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+    },
+    {
+      "id": 94,
+      "name": "Station 94",
+      "location": {
+        "latitude": 40.952927,
+        "longitude": 29.118981
+      },
+      "activity": ["shopping", "cinema", "library", "picnic", "spa"]
+    },
+    {
+      "id": 95,
+      "name": "Station 95",
+      "location": {
+        "latitude": 40.950834,
+        "longitude": 29.121383
+      },
+      "activity": ["coffee", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 96,
+      "name": "Station 96",
+      "location": {
+        "latitude": 40.953282,
+        "longitude": 29.119663
+      },
+      "activity": ["coffee", "shopping", "nail studio", "bike ride", "concert"]
+    },
+    {
+      "id": 97,
+      "name": "Station 97",
+      "location": {
+        "latitude": 40.951097,
+        "longitude": 29.122189
+      },
+      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+    },
+    {
+      "id": 98,
+      "name": "Station 98",
+      "location": {
+        "latitude": 40.953535,
+        "longitude": 29.120482
+      },
+      "activity": ["coffee", "library", "theater", "playground", "fitness"]
+    },
+    {
+      "id": 99,
+      "name": "Station 99",
+      "location": {
+        "latitude": 40.951897,
+        "longitude": 29.121901
+      },
+      "activity": ["coffee", "shopping", "restaurant", "cinema", "market"]
+    },
+    {
+      "id": 100,
+      "name": "Station 100",
+      "location": {
+        "latitude": 40.952352,
+        "longitude": 29.119229
+      },
+      "activity": ["shopping", "restaurant", "nail studio", "museum", "picnic"]
+    },
+    {
+      "id": 101,
+      "name": "Station 101",
+      "location": {
+        "latitude": 40.950956,
+        "longitude": 29.121029
+      },
+      "activity": ["coffee", "shopping", "library", "karaoke", "theater"]
+    },
+    {
+      "id": 102,
+      "name": "Station 102",
+      "location": {
+        "latitude": 40.953009,
+        "longitude": 29.120844
+      },
+      "activity": ["coffee", "restaurant", "picnic", "spa", "concert"]
+    },
+    {
+      "id": 103,
+      "name": "Station 103",
+      "location": {
+        "latitude": 40.951785,
+        "longitude": 29.122451
+      },
+      "activity": ["coffee", "shopping", "cinema", "karaoke", "hair studio"]
+    },
+    {
+      "id": 104,
+      "name": "Station 104",
+      "location": {
+        "latitude": 40.952212,
+        "longitude": 29.118517
+      },
+      "activity": ["coffee", "restaurant", "museum", "library", "sports"]
+    },
+    {
+      "id": 105,
+      "name": "Station 105",
+      "location": {
+        "latitude": 40.950664,
+        "longitude": 29.121654
+      },
+      "activity": ["shopping", "restaurant", "theater", "spa", "market"]
+    },
+    {
+      "id": 106,
+      "name": "Station 106",
+      "location": {
+        "latitude": 40.952778,
+        "longitude": 29.119987
+      },
+      "activity": ["coffee", "shopping", "cinema", "picnic", "yoga"]
+    },
+    {
+      "id": 107,
+      "name": "Station 107",
+      "location": {
+        "latitude": 40.951634,
+        "longitude": 29.122769
+      },
+      "activity": ["shopping", "restaurant", "library", "hair studio", "theater"]
+    },
+    {
+      "id": 108,
+      "name": "Station 108",
+      "location": {
+        "latitude": 40.953131,
+        "longitude": 29.120317
+      },
+      "activity": ["coffee", "shopping", "restaurant", "selfcare", "market"]
+    },
+    {
+      "id": 109,
+      "name": "Station 109",
+      "location": {
+        "latitude": 40.951785,
+        "longitude": 29.122451
+      },
+      "activity": ["coffee", "shopping", "cinema", "library", "concert"]
+    },
+    {
+      "id": 110,
+      "name": "Station 110",
+      "location": {
+        "latitude": 40.952212,
+        "longitude": 29.118517
+      },
+      "activity": ["shopping", "restaurant", "community center", "museum", "picnic"]
+    },
+    {
+      "id": 111,
+      "name": "Station 111",
+      "location": {
+        "latitude": 40.950664,
+        "longitude": 29.121654
+      },
+      "activity": ["coffee", "shopping", "restaurant", "library", "selfcare"]
+    },
+    {
+      "id": 112,
+      "name": "Station 112",
+      "location": {
+        "latitude": 40.952778,
+        "longitude": 29.119987
+      },
+      "activity": ["shopping", "cinema", "yoga", "market", "karaoke"]
+    },
+    {
+      "id": 113,
+      "name": "Station 113",
+      "location": {
+        "latitude": 40.951634,
+        "longitude": 29.122769
+      },
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+    },
+    {
+      "id": 114,
+      "name": "Station 114",
+      "location": {
+        "latitude": 40.953131,
+        "longitude": 29.120317
+      },
+      "activity": ["shopping", "cinema", "library", "picnic", "spa"]
+    },
+    {
+      "id": 115,
+      "name": "Station 115",
+      "location": {
+        "latitude": 40.951785,
+        "longitude": 29.122451
+      },
+      "activity": ["coffee", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 116,
+      "name": "Station 116",
+      "location": {
+        "latitude": 40.952212,
+        "longitude": 29.118517
+      },
+      "activity": ["coffee", "shopping", "workshop", "bike ride", "concert"]
+    },
+    {
+      "id": 117,
+      "name": "Station 117",
+      "location": {
+        "latitude": 40.950664,
+        "longitude": 29.121654
+      },
+      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+    },
+    {
+      "id": 118,
+      "name": "Station 118",
+      "location": {
+        "latitude": 40.952778,
+        "longitude": 29.119987
+      },
+      "activity": ["coffee", "library", "theater", "playground", "selfcare"]
+    },
+    {
+      "id": 119,
+      "name": "Station 119",
+      "location": {
+        "latitude": 40.951634,
+        "longitude": 29.122769
+      },
+      "activity": ["coffee", "shopping", "restaurant", "cinema", "market"]
+    },
+    {
+      "id": 120,
+      "name": "Station 120",
+      "location": {
+        "latitude": 40.953131,
+        "longitude": 29.120317
+      },
+      "activity": ["shopping", "restaurant", "nail studio", "museum", "picnic"]
+    },
+    {
+      "id": 121,
+      "name": "Station 121",
+      "location": {
+        "latitude": 40.983570,
+        "longitude": 29.056726
+      },
+      "activity": ["coffee", "shopping", "restaurant", "library", "meditation"]
+    },
+    {
+      "id": 122,
+      "name": "Station 122",
+      "location": {
+        "latitude": 40.981945,
+        "longitude": 29.056085
+      },
+      "activity": ["shopping", "cinema", "yoga", "market", "karaoke"]
+    },
+    {
+      "id": 123,
+      "name": "Station 123",
+      "location": {
+        "latitude": 40.980320,
+        "longitude": 29.055443
+      },
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+    },
+    {
+      "id": 124,
+      "name": "Station 124",
+      "location": {
+        "latitude": 40.984437,
+        "longitude": 29.057368
+      },
+      "activity": ["shopping", "cinema", "library", "picnic", "spa"]
+    },
+    {
+      "id": 125,
+      "name": "Station 125",
+      "location": {
+        "latitude": 40.982802,
+        "longitude": 29.056726
+      },
+      "activity": ["coffee", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 126,
+      "name": "Station 126",
+      "location": {
+        "latitude": 40.980896,
+        "longitude": 29.054801
+      },
+      "activity": ["coffee", "shopping", "spa", "bike ride", "concert"]
+    },
+    {
+      "id": 127,
+      "name": "Station 127",
+      "location": {
+        "latitude": 40.983195,
+        "longitude": 29.056085
+      },
+      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+    },
+    {
+      "id": 128,
+      "name": "Station 128",
+      "location": {
+        "latitude": 40.981570,
+        "longitude": 29.055443
+      },
+      "activity": ["coffee", "library", "theater", "playground", "selfcare"]
+    },
+    {
+      "id": 129,
+      "name": "Station 129",
+      "location": {
+        "latitude": 40.984081,
+        "longitude": 29.057710
+      },
+      "activity": ["coffee", "shopping", "restaurant", "cinema", "market"]
+    },
+    {
+      "id": 130,
+      "name": "Station 130",
+      "location": {
+        "latitude": 40.982445,
+        "longitude": 29.056726
+      },
+      "activity": ["shopping", "restaurant", "community center", "museum", "picnic"]
+    },
+    {
+      "id": 131,
+      "name": "Station 131",
+      "location": {
+        "latitude": 40.980820,
+        "longitude": 29.054459
+      },
+      "activity": ["coffee", "shopping", "library", "karaoke", "theater"]
+    },
+    {
+      "id": 132,
+      "name": "Station 132",
+      "location": {
+        "latitude": 40.984769,
+        "longitude": 29.057052
+      },
+      "activity": ["coffee", "restaurant", "picnic", "spa", "concert"]
+    },
+    {
+      "id": 133,
+      "name": "Station 133",
+      "location": {
+        "latitude": 40.981195,
+        "longitude": 29.055785
+      },
+      "activity": ["coffee", "shopping", "cinema", "karaoke", "stadium"]
+    },
+    {
+      "id": 134,
+      "name": "Station 134",
+      "location": {
+        "latitude": 40.980051,
+        "longitude": 29.054117
+      },
+      "activity": ["coffee", "restaurant", "museum", "library", "sports"]
+    },
+    {
+      "id": 135,
+      "name": "Station 135",
+      "location": {
+        "latitude": 40.982070,
+        "longitude": 29.056726
+      },
+      "activity": ["shopping", "restaurant", "theater", "spa", "market"]
+    },
+    {
+      "id": 136,
+      "name": "Station 136",
+      "location": {
+        "latitude": 40.984693,
+        "longitude": 29.057710
+      },
+      "activity": ["coffee", "shopping", "cinema", "picnic", "yoga"]
+    },
+    {
+      "id": 137,
+      "name": "Station 137",
+      "location": {
+        "latitude": 40.981945,
+        "longitude": 29.056726
+      },
+      "activity": ["shopping", "restaurant", "library", "stadium", "theater"]
+    },
+    {
+      "id": 138,
+      "name": "Station 138",
+      "location": {
+        "latitude": 40.980320,
+        "longitude": 29.055443
+      },
+      "activity": ["coffee", "shopping", "restaurant", "selfcare", "market"]
+    },
+    {
+      "id": 139,
+      "name": "Station 139",
+      "location": {
+        "latitude": 40.984437,
+        "longitude": 29.057368
+      },
+      "activity": ["coffee", "shopping", "cinema", "library", "concert"]
+    },
+    {
+      "id": 140,
+      "name": "Station 140",
+      "location": {
+        "latitude": 40.983195,
+        "longitude": 29.056085
+      },
+      "activity": ["shopping", "restaurant", "theater", "picnic", "workshop"]
+    },
+    {
+      "id": 141,
+      "name": "Station 141",
+      "location": {
+        "latitude": 40.980820,
+        "longitude": 29.054459
+      },
+      "activity": ["coffee", "shopping", "restaurant", "library", "art gallery"]
+    },
+    {
+      "id": 142,
+      "name": "Station 142",
+      "location": {
+        "latitude": 40.984081,
+        "longitude": 29.057710
+      },
+      "activity": ["shopping", "cinema", "yoga", "market", "karaoke"]
+    },
+    {
+      "id": 143,
+      "name": "Station 143",
+      "location": {
+        "latitude": 40.980051,
+        "longitude": 29.054117
+      },
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+    },
+    {
+      "id": 144,
+      "name": "Station 144",
+      "location": {
+        "latitude": 40.984769,
+        "longitude": 29.057052
+      },
+      "activity": ["shopping", "cinema", "library", "picnic", "spa"]
+    },
+    {
+      "id": 145,
+      "name": "Station 145",
+      "location": {
+        "latitude": 40.982445,
+        "longitude": 29.056726
+      },
+      "activity": ["coffee", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 146,
+      "name": "Station 146",
+      "location": {
+        "latitude": 40.981570,
+        "longitude": 29.055443
+      },
+      "activity": ["coffee", "shopping", "yoga", "bike ride", "concert"]
+    },
+    {
+      "id": 147,
+      "name": "Station 147",
+      "location": {
+        "latitude": 40.984437,
+        "longitude": 29.057368
+      },
+      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+    },
+    {
+      "id": 148,
+      "name": "Station 148",
+      "location": {
+        "latitude": 40.980896,
+        "longitude": 29.054801
+      },
+      "activity": ["coffee", "library", "theater", "playground", "selfcare"]
+    },
+    {
+      "id": 149,
+      "name": "Station 149",
+      "location": {
+        "latitude": 40.984081,
+        "longitude": 29.057710
+      },
+      "activity": ["coffee", "shopping", "restaurant", "cinema", "market"]
+    },
+    {
+      "id": 150,
+      "name": "Station 150",
+      "location": {
+        "latitude": 40.982445,
+        "longitude": 29.056726
+      },
+      "activity": ["shopping", "restaurant", "pilates", "museum", "picnic"]
+    },
+    {
+      "id": 151,
+      "name": "Station 151",
+      "location": {
+        "latitude": 40.950350,
+        "longitude": 29.115245
+      },
+      "activity": ["coffee", "shopping", "restaurant", "library", "sports"]
+    },
+    {
+      "id": 152,
+      "name": "Station 152",
+      "location": {
+        "latitude": 40.949789,
+        "longitude": 29.116305
+      },
+      "activity": ["shopping", "cinema", "yoga", "market", "karaoke"]
+    },
+    {
+      "id": 153,
+      "name": "Station 153",
+      "location": {
+        "latitude": 40.949298,
+        "longitude": 29.115949
+      },
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+    },
+    {
+      "id": 154,
+      "name": "Station 154",
+      "location": {
+        "latitude": 40.950827,
+        "longitude": 29.115981
+      },
+      "activity": ["shopping", "cinema", "library", "picnic", "spa"]
+    },
+    {
+      "id": 155,
+      "name": "Station 155",
+      "location": {
+        "latitude": 40.949834,
+        "longitude": 29.116981
+      },
+      "activity": ["coffee", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 156,
+      "name": "Station 156",
+      "location": {
+        "latitude": 40.950283,
+        "longitude": 29.115531
+      },
+      "activity": ["coffee", "shopping", "bike ride", "concert", "market"]
+    },
+    {
+      "id": 157,
+      "name": "Station 157",
+      "location": {
+        "latitude": 40.949989,
+        "longitude": 29.116648
+      },
+      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+    },
+    {
+      "id": 158,
+      "name": "Station 158",
+      "location": {
+        "latitude": 40.950544,
+        "longitude": 29.115745
+      },
+      "activity": ["coffee", "library", "theater", "playground", "selfcare"]
+    },
+    {
+      "id": 159,
+      "name": "Station 159",
+      "location": {
+        "latitude": 40.949462,
+        "longitude": 29.116827
+      },
+      "activity": ["coffee", "shopping", "restaurant", "cinema", "market"]
+    },
+    {
+      "id": 160,
+      "name": "Station 160",
+      "location": {
+        "latitude": 40.950101,
+        "longitude": 29.116042
+      },
+      "activity": ["shopping", "restaurant", "museum", "karaoke", "concert"]
+    },
+    {
+      "id": 161,
+      "name": "Station 161",
+      "location": {
+        "latitude": 40.949731,
+        "longitude": 29.116281
+      },
+      "activity": ["coffee", "shopping", "library", "karaoke", "theater"]
+    },
+    {
+      "id": 162,
+      "name": "Station 162",
+      "location": {
+        "latitude": 40.950367,
+        "longitude": 29.115915
+      },
+      "activity": ["coffee", "restaurant", "picnic", "spa", "concert"]
+    },
+    {
+      "id": 163,
+      "name": "Station 163",
+      "location": {
+        "latitude": 40.949875,
+        "longitude": 29.116801
+      },
+      "activity": ["coffee", "shopping", "cinema", "karaoke", "workshop"]
+    },
+    {
+      "id": 164,
+      "name": "Station 164",
+      "location": {
+        "latitude": 40.950482,
+        "longitude": 29.115623
+      },
+      "activity": ["coffee", "restaurant", "library", "picnic", "spa"]
+    },
+    {
+      "id": 165,
+      "name": "Station 165",
+      "location": {
+        "latitude": 40.949671,
+        "longitude": 29.116531
+      },
+      "activity": ["coffee", "shopping", "cinema", "market", "karaoke"]
+    },
+    {
+      "id": 166,
+      "name": "Station 166",
+      "location": {
+        "latitude": 40.950198,
+        "longitude": 29.115785
+      },
+      "activity": ["shopping", "restaurant", "theater", "spa", "market"]
+    },
+    {
+      "id": 167,
+      "name": "Station 167",
+      "location": {
+        "latitude": 40.949593,
+        "longitude": 29.116762
+      },
+      "activity": ["coffee", "shopping", "cinema", "picnic", "yoga"]
+    },
+    {
+      "id": 168,
+      "name": "Station 168",
+      "location": {
+        "latitude": 40.950296,
+        "longitude": 29.115997
+      },
+      "activity": ["shopping", "restaurant", "library", "working", "theater"]
+    },
+    {
+      "id": 169,
+      "name": "Station 169",
+      "location": {
+        "latitude": 40.949714,
+        "longitude": 29.116521
+      },
+      "activity": ["coffee", "shopping", "restaurant", "cinema", "market"]
+    },
+    {
+      "id": 170,
+      "name": "Station 170",
+      "location": {
+        "latitude": 40.950383,
+        "longitude": 29.115875
+      },
+      "activity": ["shopping", "restaurant", "playground", "museum", "picnic"]
+    },
+    {
+      "id": 171,
+      "name": "Station 171",
+      "location": {
+        "latitude": 40.981512,
+        "longitude": 29.046126
+      },
+      "activity": ["coffee", "shopping", "cinema", "yoga", "karaoke"]
+    },
+    {
+      "id": 172,
+      "name": "Station 172",
+      "location": {
+        "latitude": 40.971835,
+        "longitude": 29.076458
+      },
+      "activity": ["shopping", "restaurant", "library", "picnic", "spa"]
+    },
+    {
+      "id": 173,
+      "name": "Station 173",
+      "location": {
+        "latitude": 40.960972,
+        "longitude": 29.083524
+      },
+      "activity": ["coffee", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 174,
+      "name": "Station 174",
+      "location": {
+        "latitude": 40.954261,
+        "longitude": 29.094217
+      },
+      "activity": ["shopping", "cinema", "library", "community center", "concert"]
+    },
+    {
+      "id": 175,
+      "name": "Station 175",
+      "location": {
+        "latitude": 40.982014,
+        "longitude": 29.044986
+      },
+      "activity": ["coffee", "fitness", "playground", "selfcare", "working"]
+    },
+    {
+      "id": 176,
+      "name": "Station 176",
+      "location": {
+        "latitude": 40.971317,
+        "longitude": 29.075736
+      },
+      "activity": ["shopping", "theater", "restaurant", "market", "bike ride"]
+    },
+    {
+      "id": 177,
+      "name": "Station 177",
+      "location": {
+        "latitude": 40.961194,
+        "longitude": 29.085136
+      },
+      "activity": ["coffee", "playground", "walking", "community center", "library"]
+    },
+    {
+      "id": 178,
+      "name": "Station 178",
+      "location": {
+        "latitude": 40.953848,
+        "longitude": 29.093238
+      },
+      "activity": ["shopping", "restaurant", "cinema", "karaoke", "workshop"]
+    },
+    {
+      "id": 179,
+      "name": "Station 179",
+      "location": {
+        "latitude": 40.981745,
+        "longitude": 29.046668
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "spa"]
+    },
+    {
+      "id": 180,
+      "name": "Station 180",
+      "location": {
+        "latitude": 40.971586,
+        "longitude": 29.076976
+      },
+      "activity": ["shopping", "cinema", "selfcare", "market", "karaoke"]
+    },
+    {
+      "id": 181,
+      "name": "Station 181",
+      "location": {
+        "latitude": 40.961414,
+        "longitude": 29.085748
+      },
+      "activity": ["coffee", "shopping", "theater", "library", "restaurant"]
+    },
+    {
+      "id": 182,
+      "name": "Station 182",
+      "location": {
+        "latitude": 40.953432,
+        "longitude": 29.092760
+      },
+      "activity": ["shopping", "restaurant", "playground", "market", "bike ride"]
+    },
+    {
+      "id": 183,
+      "name": "Station 183",
+      "location": {
+        "latitude": 40.982298,
+        "longitude": 29.045424
+      },
+      "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
+    },
+    {
+      "id": 184,
+      "name": "Station 184",
+      "location": {
+        "latitude": 40.970841,
+        "longitude": 29.075216
+      },
+      "activity": ["shopping", "selfcare", "working", "museum", "picnic"]
+    },
+    {
+      "id": 185,
+      "name": "Station 185",
+      "location": {
+        "latitude": 40.961635,
+        "longitude": 29.086359
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "market"]
+    },
+    {
+      "id": 186,
+      "name": "Station 186",
+      "location": {
+        "latitude": 40.953014,
+        "longitude": 29.092282
+      },
+      "activity": ["shopping", "restaurant", "theater", "library", "fitness"]
+    },
+    {
+      "id": 187,
+      "name": "Station 187",
+      "location": {
+        "latitude": 40.982581,
+        "longitude": 29.045862
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "market"]
+    },
+    {
+      "id": 188,
+      "name": "Station 188",
+      "location": {
+        "latitude": 40.970096,
+        "longitude": 29.074696
+      },
+      "activity": ["shopping", "cinema", "selfcare", "museum", "concert"]
+    },
+    {
+      "id": 189,
+      "name": "Station 189",
+      "location": {
+        "latitude": 40.961856,
+        "longitude": 29.086970
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "spa"]
+    },
+    {
+      "id": 190,
+      "name": "Station 190",
+      "location": {
+        "latitude": 40.952595,
+        "longitude": 29.091804
+      },
+      "activity": ["shopping", "restaurant", "cinema", "market", "karaoke"]
+    },
+    {
+      "id": 191,
+      "name": "Station 191",
+      "location": {
+        "latitude": 40.982864,
+        "longitude": 29.046300
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "workshop"]
+    },
+    {
+      "id": 192,
+      "name": "Station 192",
+      "location": {
+        "latitude": 40.969351,
+        "longitude": 29.074176
+      },
+      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 193,
+      "name": "Station 193",
+      "location": {
+        "latitude": 40.962077,
+        "longitude": 29.087581
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "karaoke"]
+    },
+    {
+      "id": 194,
+      "name": "Station 194",
+      "location": {
+        "latitude": 40.952176,
+        "longitude": 29.091327
+      },
+      "activity": ["shopping", "library", "restaurant", "nail studio", "concert"]
+    },
+    {
+      "id": 195,
+      "name": "Station 195",
+      "location": {
+        "latitude": 40.983147,
+        "longitude": 29.046738
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "market"]
+    },
+    {
+      "id": 196,
+      "name": "Station 196",
+      "location": {
+        "latitude": 40.968606,
+        "longitude": 29.073656
+      },
+      "activity": ["shopping", "restaurant", "cinema", "library", "picnic"]
+    },
+    {
+      "id": 197,
+      "name": "Station 197",
+      "location": {
+        "latitude": 40.962298,
+        "longitude": 29.088192
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "spa"]
+    },
+    {
+      "id": 198,
+      "name": "Station 198",
+      "location": {
+        "latitude": 40.951757,
+        "longitude": 29.090849
+      },
+      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 199,
+      "name": "Station 199",
+      "location": {
+        "latitude": 40.983430,
+        "longitude": 29.047176
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "concert"]
+    },
+    {
+      "id": 200,
+      "name": "Station 200",
+      "location": {
+        "latitude": 40.967861,
+        "longitude": 29.073136
+      },
+      "activity": ["shopping", "cinema", "selfcare", "market", "karaoke"]
+    },
+    {
+      "id": 201,
+      "name": "Station 201",
+      "location": {
+        "latitude": 40.972345,
+        "longitude": 29.151890
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "market"]
+    },
+    {
+      "id": 202,
+      "name": "Station 202",
+      "location": {
+        "latitude": 40.972173,
+        "longitude": 29.151789
+      },
+      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 203,
+      "name": "Station 203",
+      "location": {
+        "latitude": 40.972265,
+        "longitude": 29.152402
+      },
+      "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
+    },
+    {
+      "id": 204,
+      "name": "Station 204",
+      "location": {
+        "latitude": 40.972019,
+        "longitude": 29.151988
+      },
+      "activity": ["shopping", "restaurant", "library", "market", "concert"]
+    },
+    {
+      "id": 205,
+      "name": "Station 205",
+      "location": {
+        "latitude": 40.972423,
+        "longitude": 29.152256
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "market"]
+    },
+    {
+      "id": 206,
+      "name": "Station 206",
+      "location": {
+        "latitude": 40.972148,
+        "longitude": 29.151687
+      },
+      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 207,
+      "name": "Station 207",
+      "location": {
+        "latitude": 40.972359,
+        "longitude": 29.152118
+      },
+      "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
+    },
+    {
+      "id": 208,
+      "name": "Station 208",
+      "location": {
+        "latitude": 40.972093,
+        "longitude": 29.151999
+      },
+      "activity": ["shopping", "restaurant", "library", "fitness", "hair studio"]
+    },
+    {
+      "id": 209,
+      "name": "Station 209",
+      "location": {
+        "latitude": 40.972291,
+        "longitude": 29.152330
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "market"]
+    },
+    {
+      "id": 210,
+      "name": "Station 210",
+      "location": {
+        "latitude": 40.972134,
+        "longitude": 29.151874
+      },
+      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 211,
+      "name": "Station 211",
+      "location": {
+        "latitude": 40.972245,
+        "longitude": 29.152256
+      },
+      "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
+    },
+    {
+      "id": 212,
+      "name": "Station 212",
+      "location": {
+        "latitude": 40.972079,
+        "longitude": 29.151952
+      },
+      "activity": ["shopping", "restaurant", "library", "fitness", "concert"]
+    },
+    {
+      "id": 213,
+      "name": "Station 213",
+      "location": {
+        "latitude": 40.972312,
+        "longitude": 29.152289
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "market"]
+    },
+    {
+      "id": 214,
+      "name": "Station 214",
+      "location": {
+        "latitude": 40.972165,
+        "longitude": 29.151760
+      },
+      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 215,
+      "name": "Station 215",
+      "location": {
+        "latitude": 40.972277,
+        "longitude": 29.152182
+      },
+      "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
+    },
+    {
+      "id": 216,
+      "name": "Station 216",
+      "location": {
+        "latitude": 40.972122,
+        "longitude": 29.151924
+      },
+      "activity": ["shopping", "restaurant", "library", "yoga", "pilates"]
+    },
+    {
+      "id": 217,
+      "name": "Station 217",
+      "location": {
+        "latitude": 40.972334,
+        "longitude": 29.152261
+      },
+      "activity": ["coffee", "fitness", "walking", "playground", "market"]
+    },
+    {
+      "id": 218,
+      "name": "Station 218",
+      "location": {
+        "latitude": 40.972179,
+        "longitude": 29.151843
+      },
+      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+    },
+    {
+      "id": 219,
+      "name": "Station 219",
+      "location": {
+        "latitude": 40.972290,
+        "longitude": 29.152276
+      },
+      "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
+    },
+    {
+      "id": 220,
+      "name": "Station 220",
+      "location": {
+        "latitude": 40.972135,
+        "longitude": 29.151905
+      },
+      "activity": ["shopping", "restaurant", "library", "pilates", "yoga"]
+    }
+  ]
+}

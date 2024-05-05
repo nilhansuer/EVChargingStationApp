@@ -1,0 +1,74 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:context=".SplashActivity">
+
+        <ImageView
+            android:id="@+id/buttonExit"
+            android:layout_width="46dp"
+            android:layout_height="33dp"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/ic_exit" />
+
+        <TextView
+            android:id="@+id/textHi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="cursive"
+            android:text="Hi User!"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp">
+
+                <Button
+                    android:id="@+id/buttonNearestStations"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:text="Nearest Stations"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"/>
+
+                <Button
+                    android:id="@+id/buttonChargingHistory"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:text="Charging History"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"/>
+
+                <Button
+                    android:id="@+id/buttonFavoriteStations"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:text="Favorite Stations"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

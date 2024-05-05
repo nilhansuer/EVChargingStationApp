@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/charging">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:context=".SplashActivity">
+
+        <ImageView
+            android:id="@+id/buttonExit"
+            android:layout_width="46dp"
+            android:layout_height="33dp"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/ic_exit" />
+
+        <TextView
+            android:id="@+id/textStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="cursive"
+            android:text="Station"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/activityListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonChargingDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Press When Charging is Done"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:backgroundTint= "@color/blue"
+        />
+
+</LinearLayout>
