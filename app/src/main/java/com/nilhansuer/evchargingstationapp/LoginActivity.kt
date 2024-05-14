@@ -10,6 +10,16 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
+import okhttp3.FormBody
+import okhttp3.OkHttpClient
+import okhttp3.Request
+
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.Call
+import java.io.IOException
 
 class LoginActivity : AppCompatActivity() {
 
@@ -29,6 +39,13 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         val loginButton = findViewById<Button>(R.id.registerButton)
+
+        val testButton = findViewById<Button>(R.id.testButton)
+        testButton.setOnClickListener {
+            // sendPostRequest("data")
+            sendGetRequest()
+        }
+
 
         val emailText = findViewById<EditText>(R.id.emailText)
         val passwordText = findViewById<EditText>(R.id.passwordText)
@@ -64,5 +81,57 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
         }
+    }
+
+    fun sendGetRequest() {
+        val url = "http://10.0.2.2:8000/"
+
+        val client = OkHttpClient()
+
+        val request = Request.Builder()
+            .url(url)
+            .get()
+            .build()
+
+        client.newCall(request).enqueue(object : okhttp3.Callback {
+            override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
+                // Handle successful response
+                if (response.isSuccessful) {
+                    val responseData = response.body?.string()
+                    println("Response: $responseData")
+                }
+                println("Response: $response")
+            }
+
+            override fun onFailure(call: okhttp3.Call, e: IOException) {
+                // Handle failure
+                println("Failed to send POST request: ${e.message}")
+            }
+        })
+    }
+
+    fun sendPostRequest(csvData: String) {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://10.0.2.2:8000/receive_csv/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val apiService = retrofit.create(ApiService::class.java)
+
+        val call = apiService.sendCsvData(csvData)
+        call.enqueue(object : Callback<String> {
+            override fun onResponse(call: Call<String>, response: Response<String>) {
+                if (response.isSuccessful) {
+                    val responseData = response.body()
+                    println("Response: $responseData")
+                } else {
+                    println("Failed to send POST request: ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<String>, t: Throwable) {
+                println("Failed to send POST request: ${t.message}")
+            }
+        })
     }
 }

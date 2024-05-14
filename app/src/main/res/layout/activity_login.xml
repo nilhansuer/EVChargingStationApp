@@ -9,6 +9,7 @@
     android:padding="40dp"
     tools:context=".LoginActivity">
 
+
     <TextView
         android:id="@+id/textSignup"
         android:layout_width="wrap_content"
@@ -54,6 +55,16 @@
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:text="@string/sign_up"
+        android:textColorLink="#9C27B0"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:text="testButton"
         android:textColorLink="#9C27B0"
         android:textSize="20sp"
         android:layout_marginTop="20dp" />
