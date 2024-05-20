@@ -1,25 +1,16 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/profile">
+    android:background="@drawable/ic_profile_top">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center_horizontal"
+        android:orientation="vertical"
         tools:context=".SplashActivity">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_title" />
 
         <ImageView
             android:id="@+id/buttonExit"
@@ -28,53 +19,67 @@
             android:layout_gravity="end|top"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
+            android:background="#A6FAF7F7"
             app:srcCompat="@drawable/ic_exit" />
 
         <TextView
             android:id="@+id/textHi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:fontFamily="cursive"
+            android:layout_marginTop="150dp"
             android:text="Hi User!"
+            android:textColor="#FAFFFFFF"
             android:textSize="50sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:orientation="vertical"
             android:padding="20dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="25dp"
+                android:background="#00D58687"
+                android:backgroundTint="#CC9C9C"
+                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/buttonNearestStations"
-                    android:layout_width="150dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:text="Nearest Stations"
                     android:layout_marginTop="20dp"
-                    android:textSize="20sp"/>
+                    android:backgroundTint="#325369"
+                    android:text="Nearest Stations"
+                    android:textSize="20sp"
+                    app:icon="@android:drawable/ic_menu_mylocation"
+                    app:iconSize="40dp" />
 
                 <Button
                     android:id="@+id/buttonChargingHistory"
-                    android:layout_width="150dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:text="Charging History"
                     android:layout_marginTop="10dp"
-                    android:textSize="20sp"/>
+                    android:backgroundTint="#04514A"
+                    android:text="Charging History"
+                    android:textSize="20sp"
+                    app:icon="@android:drawable/ic_menu_recent_history"
+                    app:iconSize="40dp" />
 
                 <Button
                     android:id="@+id/buttonFavoriteStations"
-                    android:layout_width="150dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:text="Favorite Stations"
                     android:layout_marginTop="10dp"
-                    android:textSize="20sp"/>
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#1B9186"
+                    android:text="Favorite Stations"
+                    android:textSize="20sp"
+                    app:icon="@android:drawable/ic_menu_myplaces"
+                    app:iconSize="40dp" />
 
             </LinearLayout>
         </LinearLayout>

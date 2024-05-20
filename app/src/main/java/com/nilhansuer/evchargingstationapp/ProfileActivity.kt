@@ -19,6 +19,18 @@ class ProfileActivity : AppCompatActivity() {
 
         // Find the Nearest Stations button
         val nearestStationsButton: Button = findViewById(R.id.buttonNearestStations)
+        val chargingHistoryButton: Button = findViewById(R.id.buttonChargingHistory)
+        val favoriteStationsButton: Button = findViewById(R.id.buttonFavoriteStations)
+
+        favoriteStationsButton.setOnClickListener {
+            val intent = Intent(this, FavoriteActivity::class.java)
+            startActivity(intent)
+        }
+
+        chargingHistoryButton.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        }
 
         // Set click listener for the Nearest Stations button
         nearestStationsButton.setOnClickListener {

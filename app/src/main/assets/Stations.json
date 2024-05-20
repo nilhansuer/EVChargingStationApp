@@ -16,7 +16,7 @@
         "latitude": 40.920815,
         "longitude": 29.133482
       },
-      "activity": ["theater", "working", "walking", "community center", "historical sites"]
+      "activity": ["theater", "working", "walking", "communitycenter", "historicalsites"]
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
         "latitude": 40.925756,
         "longitude": 29.131227
       },
-      "activity": ["restaurant", "sports", "art gallery", "library", "meditation"]
+      "activity": ["restaurant", "sports", "artgallery", "library", "meditation"]
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
         "latitude": 40.922394,
         "longitude": 29.135609
       },
-      "activity": ["coffee", "bike ride", "spa", "playground", "walking"]
+      "activity": ["coffee", "bikeride", "spa", "playground", "walking"]
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
         "latitude": 40.926173,
         "longitude": 29.130584
       },
-      "activity": ["selfcare", "meditation", "spa", "historical sites", "market"]
+      "activity": ["selfcare", "meditation", "spa", "historicalsites", "market"]
     },
     {
       "id": 6,
@@ -70,7 +70,7 @@
         "latitude": 40.924063,
         "longitude": 29.134288
       },
-      "activity": ["playground", "historical sites", "picnic", "market", "selfcare"]
+      "activity": ["playground", "historicalsites", "picnic", "market", "selfcare"]
     },
     {
       "id": 9,
@@ -187,7 +187,7 @@
         "latitude": 40.984587,
         "longitude": 29.028234
       },
-      "activity": ["coffee", "shopping", "restaurant", "library", "hair studio"]
+      "activity": ["coffee", "shopping", "restaurant", "library", "hairstudio"]
     },
     {
       "id": 22,
@@ -205,7 +205,7 @@
         "latitude": 40.983705,
         "longitude": 29.023910
       },
-      "activity": ["coffee", "restaurant", "playground", "fitness", "historical sites"]
+      "activity": ["coffee", "restaurant", "playground", "fitness", "historicalsites"]
     },
     {
       "id": 24,
@@ -232,7 +232,7 @@
         "latitude": 40.982803,
         "longitude": 29.029392
       },
-      "activity": ["coffee", "shopping", "market", "bike ride", "concert"]
+      "activity": ["coffee", "shopping", "market", "bikeride", "concert"]
     },
     {
       "id": 27,
@@ -241,7 +241,7 @@
         "latitude": 40.987088,
         "longitude": 29.023899
       },
-      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+      "activity": ["shopping", "restaurant", "artgallery", "working", "karaoke"]
     },
     {
       "id": 28,
@@ -331,7 +331,7 @@
         "latitude": 40.983922,
         "longitude": 29.028291
       },
-      "activity": ["shopping", "restaurant", "library", "nail studio", "theater"]
+      "activity": ["shopping", "restaurant", "library", "nailstudio", "theater"]
     },
     {
       "id": 38,
@@ -358,7 +358,7 @@
         "latitude": 40.987315,
         "longitude": 29.022718
       },
-      "activity": ["shopping", "restaurant", "theater", "picnic", "bike ride"]
+      "activity": ["shopping", "restaurant", "theater", "picnic", "bikeride"]
     },
     {
       "id": 41,
@@ -385,7 +385,7 @@
         "latitude": 40.976764,
         "longitude": 29.132209
       },
-      "activity": ["coffee", "sports", "playground", "bike ride", "walking"]
+      "activity": ["coffee", "sports", "playground", "bikeride", "walking"]
     },
     {
       "id": 44,
@@ -421,7 +421,7 @@
         "latitude": 40.977568,
         "longitude": 29.139091
       },
-      "activity": ["shopping", "restaurant", "library", "workshop", "historical sites"]
+      "activity": ["shopping", "restaurant", "library", "workshop", "historicalsites"]
     },
     {
       "id": 48,
@@ -430,7 +430,7 @@
         "latitude": 40.979414,
         "longitude": 29.118836
       },
-      "activity": ["coffee", "sports", "walking", "fitness", "bike ride"]
+      "activity": ["coffee", "sports", "walking", "fitness", "bikeride"]
     },
     {
       "id": 49,
@@ -547,7 +547,7 @@
         "latitude": 40.976546,
         "longitude": 29.136383
       },
-      "activity": ["coffee", "restaurant", "playground", "market", "historical sites"]
+      "activity": ["coffee", "restaurant", "playground", "market", "historicalsites"]
     },
     {
       "id": 62,
@@ -565,7 +565,7 @@
         "latitude": 40.978201,
         "longitude": 29.117902
       },
-      "activity": ["coffee", "fitness", "walking", "hair studio", "museum"]
+      "activity": ["coffee", "fitness", "walking", "hairstudio", "museum"]
     },
     {
       "id": 64,
@@ -610,7 +610,7 @@
         "latitude": 40.977128,
         "longitude": 29.118586
       },
-      "activity": ["coffee", "sports", "walking", "hair studio", "market"]
+      "activity": ["coffee", "sports", "walking", "hairstudio", "market"]
     },
     {
       "id": 69,
@@ -664,7 +664,7 @@
         "latitude": 40.977600,
         "longitude": 29.124679
       },
-      "activity": ["coffee", "sports", "walking", "community center", "concert"]
+      "activity": ["coffee", "sports", "walking", "communitycenter", "concert"]
     },
     {
       "id": 75,
@@ -709,7 +709,7 @@
         "latitude": 40.978792,
         "longitude": 29.135134
       },
-      "activity": ["shopping", "restaurant", "library", "art gallery", "spa"]
+      "activity": ["shopping", "restaurant", "library", "artgallery", "spa"]
     },
     {
       "id": 80,
@@ -736,7 +736,7 @@
         "latitude": 40.977487,
         "longitude": 29.124203
       },
-      "activity": ["coffee", "restaurant", "market", "hair studio", "karaoke"]
+      "activity": ["coffee", "restaurant", "market", "hairstudio", "karaoke"]
     },
     {
       "id": 83,
@@ -781,7 +781,7 @@
         "latitude": 40.979442,
         "longitude": 29.131888
       },
-      "activity": ["shopping", "restaurant", "library", "hair studio", "theater"]
+      "activity": ["shopping", "restaurant", "library", "hairstudio", "theater"]
     },
     {
       "id": 88,
@@ -799,7 +799,7 @@
         "latitude": 40.978610,
         "longitude": 29.137748
       },
-      "activity": ["shopping", "restaurant", "library", "art gallery", "concert"]
+      "activity": ["shopping", "restaurant", "library", "artgallery", "concert"]
     },
     {
       "id": 90,
@@ -817,7 +817,7 @@
         "latitude": 40.952350,
         "longitude": 29.118245
       },
-      "activity": ["coffee", "shopping", "restaurant", "library", "art gallery"]
+      "activity": ["coffee", "shopping", "restaurant", "library", "artgallery"]
     },
     {
       "id": 92,
@@ -835,7 +835,7 @@
         "latitude": 40.951498,
         "longitude": 29.122609
       },
-      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historicalsites"]
     },
     {
       "id": 94,
@@ -862,7 +862,7 @@
         "latitude": 40.953282,
         "longitude": 29.119663
       },
-      "activity": ["coffee", "shopping", "nail studio", "bike ride", "concert"]
+      "activity": ["coffee", "shopping", "nailstudio", "bikeride", "concert"]
     },
     {
       "id": 97,
@@ -871,7 +871,7 @@
         "latitude": 40.951097,
         "longitude": 29.122189
       },
-      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+      "activity": ["shopping", "restaurant", "artgallery", "working", "karaoke"]
     },
     {
       "id": 98,
@@ -898,7 +898,7 @@
         "latitude": 40.952352,
         "longitude": 29.119229
       },
-      "activity": ["shopping", "restaurant", "nail studio", "museum", "picnic"]
+      "activity": ["shopping", "restaurant", "nailstudio", "museum", "picnic"]
     },
     {
       "id": 101,
@@ -925,7 +925,7 @@
         "latitude": 40.951785,
         "longitude": 29.122451
       },
-      "activity": ["coffee", "shopping", "cinema", "karaoke", "hair studio"]
+      "activity": ["coffee", "shopping", "cinema", "karaoke", "hairstudio"]
     },
     {
       "id": 104,
@@ -961,7 +961,7 @@
         "latitude": 40.951634,
         "longitude": 29.122769
       },
-      "activity": ["shopping", "restaurant", "library", "hair studio", "theater"]
+      "activity": ["shopping", "restaurant", "library", "hairstudio", "theater"]
     },
     {
       "id": 108,
@@ -988,7 +988,7 @@
         "latitude": 40.952212,
         "longitude": 29.118517
       },
-      "activity": ["shopping", "restaurant", "community center", "museum", "picnic"]
+      "activity": ["shopping", "restaurant", "communitycenter", "museum", "picnic"]
     },
     {
       "id": 111,
@@ -1015,7 +1015,7 @@
         "latitude": 40.951634,
         "longitude": 29.122769
       },
-      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historicalsites"]
     },
     {
       "id": 114,
@@ -1042,7 +1042,7 @@
         "latitude": 40.952212,
         "longitude": 29.118517
       },
-      "activity": ["coffee", "shopping", "workshop", "bike ride", "concert"]
+      "activity": ["coffee", "shopping", "workshop", "bikeride", "concert"]
     },
     {
       "id": 117,
@@ -1051,7 +1051,7 @@
         "latitude": 40.950664,
         "longitude": 29.121654
       },
-      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+      "activity": ["shopping", "restaurant", "artgallery", "working", "karaoke"]
     },
     {
       "id": 118,
@@ -1078,7 +1078,7 @@
         "latitude": 40.953131,
         "longitude": 29.120317
       },
-      "activity": ["shopping", "restaurant", "nail studio", "museum", "picnic"]
+      "activity": ["shopping", "restaurant", "nailstudio", "museum", "picnic"]
     },
     {
       "id": 121,
@@ -1105,7 +1105,7 @@
         "latitude": 40.980320,
         "longitude": 29.055443
       },
-      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historicalsites"]
     },
     {
       "id": 124,
@@ -1132,7 +1132,7 @@
         "latitude": 40.980896,
         "longitude": 29.054801
       },
-      "activity": ["coffee", "shopping", "spa", "bike ride", "concert"]
+      "activity": ["coffee", "shopping", "spa", "bikeride", "concert"]
     },
     {
       "id": 127,
@@ -1141,7 +1141,7 @@
         "latitude": 40.983195,
         "longitude": 29.056085
       },
-      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+      "activity": ["shopping", "restaurant", "artgallery", "working", "karaoke"]
     },
     {
       "id": 128,
@@ -1168,7 +1168,7 @@
         "latitude": 40.982445,
         "longitude": 29.056726
       },
-      "activity": ["shopping", "restaurant", "community center", "museum", "picnic"]
+      "activity": ["shopping", "restaurant", "communitycenter", "museum", "picnic"]
     },
     {
       "id": 131,
@@ -1267,7 +1267,7 @@
         "latitude": 40.980820,
         "longitude": 29.054459
       },
-      "activity": ["coffee", "shopping", "restaurant", "library", "art gallery"]
+      "activity": ["coffee", "shopping", "restaurant", "library", "artgallery"]
     },
     {
       "id": 142,
@@ -1285,7 +1285,7 @@
         "latitude": 40.980051,
         "longitude": 29.054117
       },
-      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historicalsites"]
     },
     {
       "id": 144,
@@ -1312,7 +1312,7 @@
         "latitude": 40.981570,
         "longitude": 29.055443
       },
-      "activity": ["coffee", "shopping", "yoga", "bike ride", "concert"]
+      "activity": ["coffee", "shopping", "yoga", "bikeride", "concert"]
     },
     {
       "id": 147,
@@ -1321,7 +1321,7 @@
         "latitude": 40.984437,
         "longitude": 29.057368
       },
-      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+      "activity": ["shopping", "restaurant", "artgallery", "working", "karaoke"]
     },
     {
       "id": 148,
@@ -1375,7 +1375,7 @@
         "latitude": 40.949298,
         "longitude": 29.115949
       },
-      "activity": ["coffee", "restaurant", "playground", "selfcare", "historical sites"]
+      "activity": ["coffee", "restaurant", "playground", "selfcare", "historicalsites"]
     },
     {
       "id": 154,
@@ -1402,7 +1402,7 @@
         "latitude": 40.950283,
         "longitude": 29.115531
       },
-      "activity": ["coffee", "shopping", "bike ride", "concert", "market"]
+      "activity": ["coffee", "shopping", "bikeride", "concert", "market"]
     },
     {
       "id": 157,
@@ -1411,7 +1411,7 @@
         "latitude": 40.949989,
         "longitude": 29.116648
       },
-      "activity": ["shopping", "restaurant", "art gallery", "working", "karaoke"]
+      "activity": ["shopping", "restaurant", "artgallery", "working", "karaoke"]
     },
     {
       "id": 158,
@@ -1564,7 +1564,7 @@
         "latitude": 40.954261,
         "longitude": 29.094217
       },
-      "activity": ["shopping", "cinema", "library", "community center", "concert"]
+      "activity": ["shopping", "cinema", "library", "communitycenter", "concert"]
     },
     {
       "id": 175,
@@ -1582,7 +1582,7 @@
         "latitude": 40.971317,
         "longitude": 29.075736
       },
-      "activity": ["shopping", "theater", "restaurant", "market", "bike ride"]
+      "activity": ["shopping", "theater", "restaurant", "market", "bikeride"]
     },
     {
       "id": 177,
@@ -1591,7 +1591,7 @@
         "latitude": 40.961194,
         "longitude": 29.085136
       },
-      "activity": ["coffee", "playground", "walking", "community center", "library"]
+      "activity": ["coffee", "playground", "walking", "communitycenter", "library"]
     },
     {
       "id": 178,
@@ -1636,7 +1636,7 @@
         "latitude": 40.953432,
         "longitude": 29.092760
       },
-      "activity": ["shopping", "restaurant", "playground", "market", "bike ride"]
+      "activity": ["shopping", "restaurant", "playground", "market", "bikeride"]
     },
     {
       "id": 183,
@@ -1744,7 +1744,7 @@
         "latitude": 40.952176,
         "longitude": 29.091327
       },
-      "activity": ["shopping", "library", "restaurant", "nail studio", "concert"]
+      "activity": ["shopping", "library", "restaurant", "nailstudio", "concert"]
     },
     {
       "id": 195,
@@ -1870,7 +1870,7 @@
         "latitude": 40.972093,
         "longitude": 29.151999
       },
-      "activity": ["shopping", "restaurant", "library", "fitness", "hair studio"]
+      "activity": ["shopping", "restaurant", "library", "fitness", "hairstudio"]
     },
     {
       "id": 209,

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/charging__back">
+    android:background="@drawable/history">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,39 +26,29 @@
             app:srcCompat="@drawable/ic_exit" />
 
         <TextView
-            android:id="@+id/textStation"
+            android:id="@+id/textHistory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:background="#FD01A196"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/custom_signup_text"
             android:gravity="center"
-            android:text="Station"
-            android:textColor="@color/white"
+            android:text="Charging History"
+            android:textColor="@color/black"
             android:textSize="45sp"
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/activityListLayout"
+            android:id="@+id/historyListLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/custom_signup_text"
             android:orientation="vertical" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/buttonChargingDone"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:backgroundTint="#A1FDFCFA"
-        android:gravity="center"
-        android:text="Charging is Done"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
 
 </LinearLayout>

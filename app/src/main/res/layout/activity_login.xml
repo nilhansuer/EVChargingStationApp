@@ -14,40 +14,48 @@
         android:id="@+id/textSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="arial"
         android:text="@string/login"
+        android:textColor="@color/black"
         android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/emailText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="50dp"
+        android:background="@drawable/custom_login_text"
+        android:backgroundTint="@color/white"
         android:hint="@string/email_hint"
-        android:textColorHint="@color/white"
+        android:gravity="center"
         android:inputType="textEmailAddress"
-        android:backgroundTint="@color/white" />
+        android:textColor="#100000"
+        android:textColorHighlight="#0C0000"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/passwordText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="25dp"
+        android:background="@drawable/custom_login_text"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
         android:hint="@string/password_hint"
-        android:textColorHint="@color/white"
         android:inputType="textPassword"
-        android:backgroundTint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black" />
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:background="@drawable/custom_button"
         android:text="@string/login"
-        android:textSize="20sp"
-        android:layout_marginTop="30dp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/signupButton"
@@ -59,14 +67,5 @@
         android:textSize="20sp"
         android:layout_marginTop="20dp" />
 
-    <Button
-        android:id="@+id/testButton"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:text="testButton"
-        android:textColorLink="#9C27B0"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp" />
 
 </LinearLayout>

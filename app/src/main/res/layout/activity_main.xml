@@ -4,63 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_map2"
     tools:context=".MainActivity">
 
-    <!-- ImageView at the top -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_title" />
 
-    <!-- Header TextView below the ImageView -->
     <TextView
         android:id="@+id/headerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="10dp"
         android:text="FIND YOUR STATION"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp" />
 
     <!-- Search Area -->
+
+    <!-- Search Button -->
+
+    <!-- Map Fragment -->
+
     <EditText
         android:id="@+id/searchEditText"
         android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="Search..."
-        app:layout_constraintBottom_toBottomOf="@id/headerTextView"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:background="#3CEFE9E9"
+        android:hint="Search location..."
+        android:shadowColor="#FFFFFF"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="#F3F3F3"
         app:layout_constraintEnd_toStartOf="@id/searchButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerTextView" />
 
-    <!-- Search Button -->
     <ImageButton
         android:id="@+id/searchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:background="#3CEFE9E9"
+        android:baselineAlignBottom="false"
         android:contentDescription="Search"
         android:onClick="onClick"
         android:padding="8dp"
-        android:src="@drawable/search"
+        android:src="@android:drawable/ic_menu_search"
         app:layout_constraintBottom_toBottomOf="@id/searchEditText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/searchEditText" />
+        app:layout_constraintTop_toTopOf="@id/searchEditText"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!-- Map Fragment -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mapFragment"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,11 +74,10 @@
         android:id="@+id/findStationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="36dp"
+        android:layout_margin="20dp"
         android:background="?android:attr/selectableItemBackground"
         android:contentDescription="Find Station"
         android:onClick="onClick"
-        android:padding="8dp"
         android:src="@drawable/ic_station"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,25 +85,28 @@
 
     <TextView
         android:id="@+id/textPress"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:background="#C6F4EEEE"
         android:text="Press Here to Get The Recommended Stations"
         android:textAlignment="center"
-        android:textSize="23sp"
+        android:textColor="#120101"
+        android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/arrow"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/arrow"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toTopOf="@id/findStationButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_arrow" />
-
+        app:srcCompat="@drawable/arrow" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

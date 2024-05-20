@@ -17,19 +17,19 @@ object StationActivities {
         "pilates",
         "museum",
         "picnic",
-        "art gallery",
-        "historical sites",
+        "artgallery",
+        "historicalsites",
         "concert",
         "market",
-        "bike ride",
-        "community center",
+        "bikeride",
+        "communitycenter",
         "yoga",
-        "nail studio",
+        "nailstudio",
         "spa",
         "karaoke",
         "workshop",
         "meditation",
         "stadium",
-        "hair studio"
+        "hairstudio"
     )
 }

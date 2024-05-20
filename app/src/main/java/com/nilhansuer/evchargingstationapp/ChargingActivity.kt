@@ -1,8 +1,12 @@
 package com.nilhansuer.evchargingstationapp
 
+import android.app.Dialog
+import android.content.ContentValues
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.CheckBox
@@ -11,22 +15,17 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.common.reflect.TypeToken
 import com.google.firebase.auth.FirebaseAuth
-import com.google.gson.Gson
+import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreException
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.BufferedReader
-import java.io.BufferedWriter
 import java.io.File
-import java.io.FileWriter
 import java.io.IOException
-import java.io.InputStream
 import java.io.InputStreamReader
-import java.io.OutputStreamWriter
 import okhttp3.*
 
 class ChargingActivity : AppCompatActivity() {
@@ -34,7 +33,8 @@ class ChargingActivity : AppCompatActivity() {
     private lateinit var activityArray: JSONArray
     private val allActivitiesArrray = StationActivities.allActivitiesArray
     private lateinit var auth: FirebaseAuth
-
+    private val db = FirebaseFirestore.getInstance()
+    private var stationName: String? = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_charging)
@@ -42,11 +42,12 @@ class ChargingActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         // Retrieve the station name from the intent extras
-        val stationName = intent.getStringExtra("STATION_NAME")
+        val station = intent.getStringExtra("STATION_NAME")
+        stationName = station
 
         // Set the station name to the TextView
         val stationNameTextView = findViewById<TextView>(R.id.textStation)
-        stationNameTextView.text = stationName
+        stationNameTextView.text = station
 
         // Read the JSON file
         val jsonString = readJsonFile("Stations.json")
@@ -70,7 +71,9 @@ class ChargingActivity : AppCompatActivity() {
                         val activity = activityArray.getString(j)
                         val textView = TextView(this)
                         textView.text = activity
-                        textView.textSize = 30f // adjust text size as needed
+                        textView.textSize = 20f // adjust text size as needed
+                        textView.setTextColor(Color.BLACK)
+                        textView.gravity = Gravity.CENTER
                         activityListLayout.addView(textView)
                     }
 
@@ -81,10 +84,76 @@ class ChargingActivity : AppCompatActivity() {
             e.printStackTrace()
         }
 
+        showPopup(activityArray)
+
         // Button click listener for Charging Done
         findViewById<Button>(R.id.buttonChargingDone).setOnClickListener {
             showActivitySelectionDialog()
         }
+    }
+
+    private fun showPopup(activityArray: JSONArray) { // Pass in the recommendations list
+
+        // ... (Your existing dialog setup and close button code)
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.charging_popup_layout) // Your popup layout
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val userId = FirebaseAuth.getInstance().currentUser!!.uid
+        // 1. Fetch User Recommendations from Firebase
+        val db = FirebaseFirestore.getInstance()
+        val userRef = db.collection("recommendations").document(userId)
+
+        userRef.get().addOnSuccessListener { document ->
+            if (document != null && document.exists()) {
+                val userActivities = document.getString("activity")
+
+                // 2. Parse User Recommendations
+                val userActivityList = parseUserActivities(userActivities)
+
+                // 3. Match Recommendations with Station Activities (using activityArray)
+                val matchedRecommendations = mutableListOf<String>()
+                for (i in 0 until activityArray.length()) {
+                    val stationActivity = activityArray.getString(i)
+                    if (userActivityList.contains(stationActivity)) {
+                        matchedRecommendations.add(stationActivity)
+                    }
+                }
+
+                // 4. Populate listRecommendations LinearLayout
+                val listRecommendationsLayout = dialog.findViewById<LinearLayout>(R.id.listRecommendations)
+                listRecommendationsLayout.removeAllViews()
+                for (recommendation in matchedRecommendations) {
+                    val textView = TextView(this)
+                    textView.text = recommendation
+                    textView.textSize = 16f
+                    textView.setPadding(0, 5, 0, 5)
+                    listRecommendationsLayout.addView(textView)
+                }
+            } else {
+                // Handle case where user document doesn't exist
+            }
+        }.addOnFailureListener { exception ->
+            // Handle Firebase fetch error
+        }
+
+        val btnClosePopup = dialog.findViewById<Button>(R.id.buttonOK)
+        btnClosePopup.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+    private fun parseUserActivities(activitiesString: String?): List<String> {
+        if (activitiesString.isNullOrEmpty()) return emptyList()
+
+        val activities = JSONArray(activitiesString)
+        val result = mutableListOf<String>()
+        for (i in 0 until activities.length()) {
+            result.add(activities.getJSONArray(i).getString(0)) // Get the activity name (index 0)
+        }
+        return result
     }
 
     private fun showActivitySelectionDialog() {
@@ -103,10 +172,9 @@ class ChargingActivity : AppCompatActivity() {
         }
 
         // Set up AlertDialog.Builder with dialogView
-        val dialogBuilder = AlertDialog.Builder(this)
+        val dialogBuilder = AlertDialog.Builder(this, R.style.RoundedDialog)
             .setView(dialogView)
             .setTitle("Select Activities")
-
 
         // Set positive button click listener
         dialogBuilder.setPositiveButton("OK") { dialog, which ->
@@ -134,10 +202,30 @@ class ChargingActivity : AppCompatActivity() {
             val lines = readCsvFile(this, csvFileName)
             var csvString = ""
             lines.forEach { line ->
-                Log.d("CSV Line", line)
+                //Log.d("CSV Line", line)
                 csvString += line
+                csvString += '\n'
+
             }
-            sendPostRequest(csvString)
+            println(csvString)
+
+            // Find the user's row in the CSV based on UID (if it exists)
+            val currentUserUid = auth.currentUser?.uid
+            val userRow = lines.find { it.startsWith("$currentUserUid,") }
+
+            val allSelectedActivities = mutableListOf<String>()
+            if (userRow != null) {
+                // User row exists - get historical selections
+                val activityValues = userRow.split(",").drop(1)  // Drop the UID
+                for (i in activityValues.indices) {
+                    if (activityValues[i] == "1.0") {
+                        allSelectedActivities.add(allActivitiesArrray[i]) // Get the activity name from allActivitiesArray
+                    }
+                }
+            }
+            println("All selected activities: " + allSelectedActivities.toString())
+            addStationHistory(stationName.toString(), selectedActivities)
+            sendPostRequest(csvString , allSelectedActivities.toString())
         }
 
         // Set negative button click listener
@@ -152,13 +240,44 @@ class ChargingActivity : AppCompatActivity() {
 
     }
 
-    fun sendPostRequest(csvData: String) {
-        val url = "http://localhost:8000/receive_csv/"
+    fun addStationHistory(stationName: String, activities: List<String>) {
+        val currentUserUid = auth.currentUser?.uid
+        val userUid = currentUserUid.toString()
+
+        val db = FirebaseFirestore.getInstance()
+        val userDocRef = db.collection("stationHistory").document(userUid)
+
+        userDocRef.get()
+            .addOnSuccessListener { documentSnapshot ->
+                val stationActivities = activities.joinToString(", ")
+                if (documentSnapshot.exists()) {
+                    // Document exists, update the 'history' field
+                    val currentHistory = documentSnapshot.get("history") as? MutableMap<String, String> ?: mutableMapOf()
+                    currentHistory[stationName] = stationActivities // Update or add the station entry
+                    userDocRef.update("history", currentHistory)
+                } else {
+                    // Document doesn't exist, create it with initial data
+                    val stationData = hashMapOf(
+                        "history" to mapOf(stationName to stationActivities)
+                    )
+                    userDocRef.set(stationData)
+                }
+            }
+            .addOnFailureListener { e ->
+                println("Error checking or updating document: $e")
+            }
+    }
+
+
+
+    fun sendPostRequest(csvData: String, currentData: String) {
+        val url = "http://10.0.2.2:8000/receive_csv/"
 
         val client = OkHttpClient()
 
         val requestBody = FormBody.Builder()
             .add("csv_data", csvData)
+            .add("current_data", currentData)
             .build()
 
         val request = Request.Builder()
@@ -171,6 +290,7 @@ class ChargingActivity : AppCompatActivity() {
                 // Handle successful response
                 if (response.isSuccessful) {
                     val responseData = response.body?.string()
+                    saveRecommendation(responseData)
                     println("Response: $responseData")
                 }
             }
@@ -182,48 +302,79 @@ class ChargingActivity : AppCompatActivity() {
         })
     }
 
+    private fun saveRecommendation(data: String?) {
+        val userId = FirebaseAuth.getInstance().currentUser!!.uid
+
+        // Update only the "activity" field
+        db.collection("recommendations").document(userId)
+            .update("activity", data)
+            .addOnSuccessListener {
+                Log.d(ContentValues.TAG, "Activity recommendation updated successfully")
+            }
+            .addOnFailureListener { e ->
+                // If the document doesn't exist, create it with the new data
+                if (e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.NOT_FOUND) {
+                    val userMap = hashMapOf("activity" to data)
+                    db.collection("recommendations").document(userId).set(userMap)
+                        .addOnSuccessListener {
+                            Log.d(ContentValues.TAG, "Activity recommendation created successfully")
+                        }
+                        .addOnFailureListener { e2 ->
+                            Log.w(ContentValues.TAG, "Error creating activity recommendation", e2)
+                        }
+                } else {
+                    Log.w(ContentValues.TAG, "Error updating activity recommendation", e)
+                }
+            }
+    }
+
     private fun saveToCsv(selectedActivities: List<String>) {
         val csvFileName = "preferenceDataset.csv"
+        val currentUserUid = auth.currentUser?.uid
 
-        // Get the UID of the current user from Firebase Authentication
-        val currentUser = auth.currentUser
-        val currentUserUid = currentUser?.uid
-
-        // Check if the user is authenticated
         if (currentUserUid != null) {
+            var existingCsvRows = mutableListOf<String>()
+            var userRowExists = false
+            var userRowIndex = -1
 
-            // Read existing content of the CSV file
-            val existingCsvRows = mutableListOf<String>()
+            // Read existing CSV, look for the user's row
             try {
-                val inputStream = openFileInput(csvFileName)
-                val reader = BufferedReader(InputStreamReader(inputStream))
-                var line: String?
-                while (reader.readLine().also { line = it } != null) {
-                    existingCsvRows.add(line!!)
+                openFileInput(csvFileName).bufferedReader().useLines { lines ->
+                    lines.forEachIndexed { index, line ->
+                        existingCsvRows.add(line)
+                        if (line.startsWith("$currentUserUid,")) {
+                            userRowExists = true
+                            userRowIndex = index
+                        }
+                    }
                 }
-                reader.close()
             } catch (e: IOException) {
                 e.printStackTrace()
             }
 
-            // Construct the row for the current user
-            val currentUserRow = "$currentUserUid," +
-                    allActivitiesArrray.joinToString(",") { if (it in selectedActivities) "1" else "" }
-            existingCsvRows.add(currentUserRow)
+            val newActivityValues = allActivitiesArrray.map { if (it in selectedActivities) 1.0 else "" }
 
-            // Write the CSV row to internal storage
+            if (userRowExists) {
+                // Update existing row
+                val existingActivities = existingCsvRows[userRowIndex].split(",").drop(1) // Drop the UID
+                val updatedActivities = existingActivities.zip(newActivityValues)
+                    .map { (existing, new) -> if (new == 1.0) 1.0 else existing } // Keep existing "1" values
+                existingCsvRows[userRowIndex] = "$currentUserUid," + updatedActivities.joinToString(",")
+            } else {
+                // Create new row
+                val currentUserRow = "$currentUserUid," + newActivityValues.joinToString(",")
+                existingCsvRows.add(currentUserRow)
+            }
+
+
+            // Write updated CSV
             try {
-                val fileOutputStream = openFileOutput(csvFileName, Context.MODE_PRIVATE)
-                val writer = BufferedWriter(OutputStreamWriter(fileOutputStream))
-                for (row in existingCsvRows) {
-                    writer.write(row)
-                    writer.newLine()
+                openFileOutput(csvFileName, Context.MODE_PRIVATE).bufferedWriter().use { writer ->
+                    existingCsvRows.forEach { row ->
+                        writer.write(row)
+                        writer.newLine()
+                    }
                 }
-                writer.close()
-
-                val filePath = File(filesDir, csvFileName).absolutePath
-                Log.d("File Path", filePath)
-
                 Toast.makeText(this, "User activities saved to CSV", Toast.LENGTH_SHORT).show()
             } catch (e: IOException) {
                 e.printStackTrace()

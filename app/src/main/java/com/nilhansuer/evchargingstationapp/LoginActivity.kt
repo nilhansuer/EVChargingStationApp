@@ -40,13 +40,6 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         val loginButton = findViewById<Button>(R.id.registerButton)
 
-        val testButton = findViewById<Button>(R.id.testButton)
-        testButton.setOnClickListener {
-            // sendPostRequest("data")
-            sendGetRequest()
-        }
-
-
         val emailText = findViewById<EditText>(R.id.emailText)
         val passwordText = findViewById<EditText>(R.id.passwordText)
 

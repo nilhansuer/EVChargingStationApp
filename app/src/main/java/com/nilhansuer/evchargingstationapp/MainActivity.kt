@@ -26,6 +26,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -36,8 +38,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private var mGoogleMap: GoogleMap? = null
     private val LOCATION_PERMISSION_REQUEST_CODE = 1
 
+    private lateinit var auth: FirebaseAuth
+    private val db = FirebaseFirestore.getInstance()
+
     private var lat_search: Double = 0.0
     private var long_search: Double = 0.0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -152,34 +158,83 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun displayChargingStations() {
-        println("Latitude: $lat_search")
-        println("Longitude: $long_search")
-        try {
-            val inputStream = assets.open("Stations.json")
-            val size = inputStream.available()
-            val buffer = ByteArray(size)
-            inputStream.read(buffer)
-            inputStream.close()
-            val json = String(buffer, Charset.forName("UTF-8"))
-            val jsonObject = JSONObject(json)
-            val stationsArray = jsonObject.getJSONArray("stations")
+        auth = FirebaseAuth.getInstance()
+        val userId = FirebaseAuth.getInstance().currentUser!!.uid
 
-            for (i in 0 until stationsArray.length()) {
-                val stationObject = stationsArray.getJSONObject(i)
-                val name = stationObject.getString("name")
-                val locationObject = stationObject.getJSONObject("location")
-                val latitude = locationObject.getDouble("latitude")
-                val longitude = locationObject.getDouble("longitude")
+        val userRef = db.collection("recommendations").document(userId)
 
-                if(((lat_search <= latitude + 0.02) && (lat_search >= latitude - 0.02)) && ((long_search <= longitude + 0.02) && (long_search >= longitude - 0.02))){
-                    addMarkerToMap(name, latitude, longitude)
+        userRef.get().addOnSuccessListener { document ->
+            if (document != null && document.exists()) {
+                val userActivities = document.getString("activity")
+
+                // 2. Parse User Preferences
+                val userActivityList = parseUserActivities(userActivities)
+
+                // 3. Load and Filter Stations
+                try {
+                    val inputStream = assets.open("Stations.json")
+                    val size = inputStream.available()
+                    val buffer = ByteArray(size)
+                    inputStream.read(buffer)
+                    inputStream.close()
+
+                    val json = String(buffer, Charset.forName("UTF-8"))
+                    val jsonObject = JSONObject(json)
+                    val stationsArray = jsonObject.getJSONArray("stations")
+
+                    for (i in 0 until stationsArray.length()) {
+                        val stationObject = stationsArray.getJSONObject(i)
+                        val name = stationObject.getString("name")
+                        val locationObject = stationObject.getJSONObject("location")
+                        val latitude = locationObject.getDouble("latitude")
+                        val longitude = locationObject.getDouble("longitude")
+                        val stationActivities = stationObject.getJSONArray("activity")
+
+                        // 4. Check for Activity Match
+                        if (hasMatchingActivity(userActivityList, stationActivities) &&
+                            withinSearchRadius(lat_search, long_search, latitude, longitude)) {
+                            addMarkerToMap(name, latitude, longitude)
+                        }
+                    }
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                } catch (e: JSONException) {
+                    e.printStackTrace()
                 }
+            } else {
+                // Handle case where user document doesn't exist
             }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        } catch (e: JSONException) {
-            e.printStackTrace()
+        }.addOnFailureListener { exception ->
+            // Handle Firebase fetch error
         }
+    }
+
+// Helper Functions
+
+    private fun parseUserActivities(activitiesString: String?): List<String> {
+        if (activitiesString.isNullOrEmpty()) return emptyList()
+
+        // Parse and extract activities (you'll need to adjust based on your JSON format)
+        val activities = JSONArray(activitiesString)
+        val result = mutableListOf<String>()
+        for (i in 0 until activities.length()) {
+            result.add(activities.getJSONArray(i).getString(0)) // Assuming [["activity", score]]
+        }
+        return result
+    }
+
+    private fun hasMatchingActivity(userActivities: List<String>, stationActivities: JSONArray): Boolean {
+        for (i in 0 until stationActivities.length()) {
+            if (userActivities.contains(stationActivities.getString(i))) {
+                return true // At least one activity matches
+            }
+        }
+        return false
+    }
+
+    private fun withinSearchRadius(latSearch: Double, longSearch: Double, latStation: Double, longStation: Double): Boolean {
+        return (latSearch <= latStation + 0.02 && latSearch >= latStation - 0.02) &&
+                (longSearch <= longStation + 0.02 && longSearch >= longStation - 0.02)
     }
 
     private fun addMarkerToMap(name: String, latitude: Double, longitude: Double) {

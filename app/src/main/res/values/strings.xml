@@ -3,7 +3,6 @@
     <string name="google_map_api_key">AIzaSyADi91MBw5ICDnRRLw6IbTUS8fg9WsLuTQ</string>
     <string name="selected_item">Selected item:</string>
     <string name="name_surname">nılhan suer</string>
-    <string name="name_surname_2">ümıt erkan</string>
     <string name="sign_up">Sign Up</string>
     <string name="enter_your_surname">Enter your surname</string>
     <string name="email">Email</string>
@@ -23,11 +22,22 @@
     <string name="valid_password">Valid password!</string>
     <string name="register">Register</string>
     <string name="city">City</string>
-    <string name="weather_info">Get The Weather Info</string>
     <string name="ok">OK</string>
     <string name="type_location">Please type a location</string>
     <string name="location">Location</string>
     <string name="search">Search</string>
     <string name="click_the_icon">CLICK HERE</string>
     <string name="hello">Hello</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
 </resources>
