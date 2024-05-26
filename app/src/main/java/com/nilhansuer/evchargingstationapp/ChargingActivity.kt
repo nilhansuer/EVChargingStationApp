@@ -3,6 +3,7 @@ package com.nilhansuer.evchargingstationapp
 import android.app.Dialog
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,8 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -40,6 +43,19 @@ class ChargingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_charging)
 
         auth = FirebaseAuth.getInstance()
+
+        val addFavButton = findViewById<ImageButton>(R.id.imageButtonAddFav)
+
+        addFavButton.setOnClickListener {
+            addFavorite()
+        }
+
+        val exitButton: ImageView = findViewById(R.id.buttonExit)
+        exitButton.setOnClickListener {
+            auth.signOut()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         // Retrieve the station name from the intent extras
         val station = intent.getStringExtra("STATION_NAME")
@@ -91,6 +107,43 @@ class ChargingActivity : AppCompatActivity() {
             showActivitySelectionDialog()
         }
     }
+
+    private fun addFavorite() {
+        val userId = auth.currentUser?.uid ?: return // Exit if not logged in
+        val stationName = stationName ?: return // Exit if station name not available
+
+        val favStationsRef = db.collection("favoriteStations").document(userId)
+
+        favStationsRef.get()
+            .addOnSuccessListener { documentSnapshot ->
+                val existingFavorites = if (documentSnapshot.exists()) {
+                    // Safely get the list or initialize it if not present
+                    (documentSnapshot.get("stations") as? List<String>)?.toMutableList()
+                        ?: mutableListOf()
+                } else {
+                    mutableListOf()
+                }
+
+                if (!existingFavorites.contains(stationName)) { // Check if station is already a favorite
+                    existingFavorites.add(stationName)
+                    favStationsRef.set(hashMapOf("stations" to existingFavorites))
+                        .addOnSuccessListener {
+                            Toast.makeText(this, "$stationName added to favorites!", Toast.LENGTH_SHORT).show()
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(this, "Failed to add favorite: ${e.message}", Toast.LENGTH_SHORT).show()
+                        }
+                } else {
+                    Toast.makeText(this, "$stationName is already in favorites.", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Failed to check favorites: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+
+
 
     private fun showPopup(activityArray: JSONArray) { // Pass in the recommendations list
 

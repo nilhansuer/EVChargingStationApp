@@ -10,14 +10,14 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context=".SplashActivity">
+        tools:context=".ProfileActivity">
 
         <ImageView
             android:id="@+id/buttonExit"
             android:layout_width="46dp"
             android:layout_height="33dp"
             android:layout_gravity="end|top"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:background="#A6FAF7F7"
             app:srcCompat="@drawable/ic_exit" />
@@ -26,26 +26,22 @@
             android:id="@+id/textHi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
-            android:text="Hi User!"
-            android:textColor="#FAFFFFFF"
-            android:textSize="50sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="130dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="5dp"
                 android:background="#00D58687"
                 android:backgroundTint="#CC9C9C"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/buttonNearestStations"
@@ -74,12 +70,44 @@
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="10dp"
                     android:backgroundTint="#1B9186"
                     android:text="Favorite Stations"
                     android:textSize="20sp"
                     app:icon="@android:drawable/ic_menu_myplaces"
                     app:iconSize="40dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/buttonAbout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="#3F51B5"
+                        android:text="About"
+                        android:textSize="16sp"
+                        app:icon="@android:drawable/ic_menu_info_details"
+                        app:iconSize="30dp" />
+
+                    <Button
+                        android:id="@+id/buttonHelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="#3F51B5"
+                        android:text="Help"
+                        android:textSize="16sp"
+                        app:icon="@android:drawable/ic_menu_help"
+                        app:iconSize="30dp" />
+
+                </LinearLayout>
+
+
 
             </LinearLayout>
         </LinearLayout>

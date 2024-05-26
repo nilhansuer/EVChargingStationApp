@@ -44,11 +44,6 @@ class LoginActivity : AppCompatActivity() {
         val passwordText = findViewById<EditText>(R.id.passwordText)
 
         loginButton.setOnClickListener {
-
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
-            finish()
-
             val email = emailText.text.toString()
             val password = passwordText.text.toString()
 

@@ -5,50 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/favorite">
+    android:background="@drawable/favorite"
+    tools:context=".FavoriteActivity">
+
+    <ImageView
+        android:id="@+id/buttonExit"
+        android:layout_width="46dp"
+        android:layout_height="33dp"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="#8DF6F4F4"
+        app:srcCompat="@drawable/ic_exit" />
+
+    <TextView
+        android:id="@+id/textFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/custom_signup_text"
+        android:gravity="center"
+        android:text="Favorite Stations"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        tools:context=".SplashActivity">
-
-        <ImageView
-            android:id="@+id/buttonExit"
-            android:layout_width="46dp"
-            android:layout_height="33dp"
-            android:layout_gravity="end|top"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="10dp"
-            android:background="#8DF6F4F4"
-            app:srcCompat="@drawable/ic_exit" />
-
-        <TextView
-            android:id="@+id/textHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/custom_signup_text"
-            android:gravity="center"
-            android:text="Favorite Stations"
-            android:textColor="@color/black"
-            android:textSize="45sp"
-            android:textStyle="bold" />
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_history_text"
+        android:orientation="horizontal"
+        android:padding="20dp">
         <LinearLayout
-            android:id="@+id/activityListLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
-            android:background="#C4F8F8F8"
-            android:orientation="vertical" />
-
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/iconListLayout"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/favoriteListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

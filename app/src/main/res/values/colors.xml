@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="low_opacity_white">#99FFFFFF</color>
+    <color name="medium_opacity_white">#CEFFFFFF</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#B659C6</color>
     <color name="blue">#78D7E3</color>
