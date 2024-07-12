@@ -16,5 +16,4 @@
  
  ![Ekran görüntüsü 2024-07-12 134002](https://github.com/user-attachments/assets/4da142b3-3c23-46b1-9218-90b4dbbb306b)
 
-
-[interfaces.pdf](https://github.com/user-attachments/files/16192497/interfaces.pdf)
+![Ekran görüntüsü 2024-07-12 134204](https://github.com/user-attachments/assets/f6b50133-a729-488a-a2b4-75850ec71f36)
