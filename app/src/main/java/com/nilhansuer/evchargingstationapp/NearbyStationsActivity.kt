@@ -67,6 +67,12 @@ class NearbyStationsActivity : AppCompatActivity(), OnMapReadyCallback {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        val backButton: ImageView = findViewById(R.id.buttonBack)
+        backButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun onClick(v: View) {
@@ -128,16 +134,14 @@ class NearbyStationsActivity : AppCompatActivity(), OnMapReadyCallback {
             // Get the station name from the marker's title
             val stationName = marker.title
 
-            // Create an intent to start ChargingActivity and pass the station name as an extra
             val intent = Intent(this, ChargingActivity::class.java).apply {
                 putExtra("STATION_NAME", stationName)
             }
             startActivity(intent)
-            true // return true to indicate that the click event has been consumed
+            true
         }
         enableMyLocation()
     }
-
 
 
     private fun enableMyLocation() {
@@ -170,37 +174,40 @@ class NearbyStationsActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun displayChargingStations() {
         auth = FirebaseAuth.getInstance()
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
+        var latitude = 0.0
+        var longitude = 0.0
+        var name = ""
 
         val userRef = db.collection("recommendations").document(userId)
+
+        val inputStream = assets.open("Stations.json")
+        val size = inputStream.available()
+        val buffer = ByteArray(size)
+        inputStream.read(buffer)
+        inputStream.close()
+
+        val json = String(buffer, Charset.forName("UTF-8"))
+        val jsonObject = JSONObject(json)
+        val stationsArray = jsonObject.getJSONArray("stations")
 
         userRef.get().addOnSuccessListener { document ->
             if (document != null && document.exists()) {
                 val userActivities = document.getString("activity")
 
-                // 2. Parse User Preferences
+                // Parse User Preferences
                 val userActivityList = parseUserActivities(userActivities)
 
-                // 3. Load and Filter Stations
+                // Load and Filter Stations
                 try {
-                    val inputStream = assets.open("Stations.json")
-                    val size = inputStream.available()
-                    val buffer = ByteArray(size)
-                    inputStream.read(buffer)
-                    inputStream.close()
-
-                    val json = String(buffer, Charset.forName("UTF-8"))
-                    val jsonObject = JSONObject(json)
-                    val stationsArray = jsonObject.getJSONArray("stations")
-
                     for (i in 0 until stationsArray.length()) {
                         val stationObject = stationsArray.getJSONObject(i)
-                        val name = stationObject.getString("name")
+                        name = stationObject.getString("name")
                         val locationObject = stationObject.getJSONObject("location")
-                        val latitude = locationObject.getDouble("latitude")
-                        val longitude = locationObject.getDouble("longitude")
+                        latitude = locationObject.getDouble("latitude")
+                        longitude = locationObject.getDouble("longitude")
                         val stationActivities = stationObject.getJSONArray("activity")
 
-                        // 4. Check for Activity Match
+                        // Check for Activity Match
                         if (hasMatchingActivity(userActivityList, stationActivities) &&
                             withinSearchRadius(lat_search, long_search, latitude, longitude)) {
                             addMarkerToMap(name, latitude, longitude)
@@ -212,19 +219,27 @@ class NearbyStationsActivity : AppCompatActivity(), OnMapReadyCallback {
                     e.printStackTrace()
                 }
             } else {
-                // Handle case where user document doesn't exist
+                for (i in 0 until stationsArray.length()) {
+                    val stationObject = stationsArray.getJSONObject(i)
+                    name = stationObject.getString("name")
+                    val locationObject = stationObject.getJSONObject("location")
+                    latitude = locationObject.getDouble("latitude")
+                    longitude = locationObject.getDouble("longitude")
+
+                    if (withinSearchRadius(lat_search, long_search, latitude, longitude)) {
+                        addMarkerToMap(name, latitude, longitude)
+                    }
+                }
             }
         }.addOnFailureListener { exception ->
             // Handle Firebase fetch error
         }
     }
 
-// Helper Functions
-
     private fun parseUserActivities(activitiesString: String?): List<String> {
         if (activitiesString.isNullOrEmpty()) return emptyList()
 
-        // Parse and extract activities (you'll need to adjust based on your JSON format)
+        // Parse and extract activities
         val activities = JSONArray(activitiesString)
         val result = mutableListOf<String>()
         for (i in 0 until activities.length()) {

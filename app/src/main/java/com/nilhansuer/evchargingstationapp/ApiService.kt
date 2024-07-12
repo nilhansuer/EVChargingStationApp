@@ -8,5 +8,5 @@ import retrofit2.http.POST
 interface ApiService {
     @FormUrlEncoded
     @POST("receive_csv/")
-    fun sendCsvData(@Field("csv_data") csvData: String): Call<String> // Change String to whatever type you expect from the response
+    fun sendCsvData(@Field("csv_data") csvData: String): Call<String>
 }

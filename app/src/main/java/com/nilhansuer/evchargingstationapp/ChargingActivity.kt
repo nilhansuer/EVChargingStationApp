@@ -57,6 +57,12 @@ class ChargingActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val backButton: ImageView = findViewById(R.id.buttonBack)
+        backButton.setOnClickListener {
+            val intent = Intent(this, NearbyStationsActivity::class.java)
+            startActivity(intent)
+        }
+
         // Retrieve the station name from the intent extras
         val station = intent.getStringExtra("STATION_NAME")
         stationName = station
@@ -172,16 +178,30 @@ class ChargingActivity : AppCompatActivity() {
                         matchedRecommendations.add(stationActivity)
                     }
                 }
+                println(matchedRecommendations)
+
+                val finalmatchedRecommendations = mutableListOf<String>()
+                for (i in 0 until userActivityList.size) {
+                    for(j in 0 until matchedRecommendations.size){
+                        if(userActivityList[i] == matchedRecommendations[j]){
+                            finalmatchedRecommendations.add(userActivityList[i])
+                        }
+                    }
+                }
 
                 // 4. Populate listRecommendations LinearLayout
                 val listRecommendationsLayout = dialog.findViewById<LinearLayout>(R.id.listRecommendations)
                 listRecommendationsLayout.removeAllViews()
-                for (recommendation in matchedRecommendations) {
+                var priority = 1
+                var stringPriority = ""
+                for (recommendation in finalmatchedRecommendations) {
                     val textView = TextView(this)
-                    textView.text = recommendation
+                    stringPriority = priority.toString()
+                    textView.text = stringPriority + " " + recommendation
                     textView.textSize = 16f
                     textView.setPadding(0, 5, 0, 5)
                     listRecommendationsLayout.addView(textView)
+                    priority++
                 }
             } else {
                 // Handle case where user document doesn't exist
@@ -210,13 +230,10 @@ class ChargingActivity : AppCompatActivity() {
     }
 
     private fun showActivitySelectionDialog() {
-        // Inflate the layout for the dialog
         val dialogView = LayoutInflater.from(this).inflate(R.layout.select_activity_layout, null)
 
-        // Get the LinearLayout container for checkboxes
         val checkboxContainer = dialogView.findViewById<LinearLayout>(R.id.checkboxContainer)
 
-        // Create and add checkboxes for each activity
         for (i in 0 until activityArray.length()) {
             val activity = activityArray.getString(i)
             val checkBox = CheckBox(this)
@@ -224,28 +241,22 @@ class ChargingActivity : AppCompatActivity() {
             checkboxContainer.addView(checkBox)
         }
 
-        // Set up AlertDialog.Builder with dialogView
         val dialogBuilder = AlertDialog.Builder(this, R.style.RoundedDialog)
             .setView(dialogView)
             .setTitle("Select Activities")
 
-        // Set positive button click listener
         dialogBuilder.setPositiveButton("OK") { dialog, which ->
-            // Handle OK button click
             val selectedActivities = mutableListOf<String>()
 
-            // Iterate through all child views of the checkbox container
             for (i in 0 until checkboxContainer.childCount) {
                 val view = checkboxContainer.getChildAt(i)
                 if (view is CheckBox) {
-                    // If the checkbox is checked, add its text to the list of selected activities
                     if (view.isChecked) {
                         selectedActivities.add(view.text.toString())
                     }
                 }
             }
 
-            // Do something with the selected activities
             val selectedActivitiesText = selectedActivities.joinToString(", ")
             Toast.makeText(this, "Selected activities: $selectedActivitiesText", Toast.LENGTH_SHORT).show()
             // Save selected activities to CSV
@@ -255,21 +266,19 @@ class ChargingActivity : AppCompatActivity() {
             val lines = readCsvFile(this, csvFileName)
             var csvString = ""
             lines.forEach { line ->
-                //Log.d("CSV Line", line)
                 csvString += line
                 csvString += '\n'
 
             }
             println(csvString)
 
-            // Find the user's row in the CSV based on UID (if it exists)
             val currentUserUid = auth.currentUser?.uid
             val userRow = lines.find { it.startsWith("$currentUserUid,") }
 
             val allSelectedActivities = mutableListOf<String>()
             if (userRow != null) {
                 // User row exists - get historical selections
-                val activityValues = userRow.split(",").drop(1)  // Drop the UID
+                val activityValues = userRow.split(",").drop(1)
                 for (i in activityValues.indices) {
                     if (activityValues[i] == "1.0") {
                         allSelectedActivities.add(allActivitiesArrray[i]) // Get the activity name from allActivitiesArray
@@ -281,13 +290,10 @@ class ChargingActivity : AppCompatActivity() {
             sendPostRequest(csvString , allSelectedActivities.toString())
         }
 
-        // Set negative button click listener
         dialogBuilder.setNegativeButton("Cancel") { dialog, which ->
-            // Handle Cancel button click
             dialog.dismiss()
         }
 
-        // Create and show the AlertDialog
         val alertDialog = dialogBuilder.create()
         alertDialog.show()
 
@@ -304,12 +310,10 @@ class ChargingActivity : AppCompatActivity() {
             .addOnSuccessListener { documentSnapshot ->
                 val stationActivities = activities.joinToString(", ")
                 if (documentSnapshot.exists()) {
-                    // Document exists, update the 'history' field
                     val currentHistory = documentSnapshot.get("history") as? MutableMap<String, String> ?: mutableMapOf()
                     currentHistory[stationName] = stationActivities // Update or add the station entry
                     userDocRef.update("history", currentHistory)
                 } else {
-                    // Document doesn't exist, create it with initial data
                     val stationData = hashMapOf(
                         "history" to mapOf(stationName to stationActivities)
                     )
@@ -340,7 +344,6 @@ class ChargingActivity : AppCompatActivity() {
 
         client.newCall(request).enqueue(object : Callback {
             override fun onResponse(call: Call, response: Response) {
-                // Handle successful response
                 if (response.isSuccessful) {
                     val responseData = response.body?.string()
                     saveRecommendation(responseData)
@@ -349,7 +352,6 @@ class ChargingActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call, e: IOException) {
-                // Handle failure
                 println("Failed to send POST request: ${e.message}")
             }
         })
@@ -365,7 +367,6 @@ class ChargingActivity : AppCompatActivity() {
                 Log.d(ContentValues.TAG, "Activity recommendation updated successfully")
             }
             .addOnFailureListener { e ->
-                // If the document doesn't exist, create it with the new data
                 if (e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.NOT_FOUND) {
                     val userMap = hashMapOf("activity" to data)
                     db.collection("recommendations").document(userId).set(userMap)
@@ -390,7 +391,6 @@ class ChargingActivity : AppCompatActivity() {
             var userRowExists = false
             var userRowIndex = -1
 
-            // Read existing CSV, look for the user's row
             try {
                 openFileInput(csvFileName).bufferedReader().useLines { lines ->
                     lines.forEachIndexed { index, line ->
@@ -407,6 +407,7 @@ class ChargingActivity : AppCompatActivity() {
 
             val newActivityValues = allActivitiesArrray.map { if (it in selectedActivities) 1.0 else "" }
 
+
             if (userRowExists) {
                 // Update existing row
                 val existingActivities = existingCsvRows[userRowIndex].split(",").drop(1) // Drop the UID
@@ -418,7 +419,6 @@ class ChargingActivity : AppCompatActivity() {
                 val currentUserRow = "$currentUserUid," + newActivityValues.joinToString(",")
                 existingCsvRows.add(currentUserRow)
             }
-
 
             // Write updated CSV
             try {
@@ -450,9 +450,6 @@ class ChargingActivity : AppCompatActivity() {
 
         return lines
     }
-
-
-
 
 
     private fun readJsonFile(filename: String): String {

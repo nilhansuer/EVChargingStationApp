@@ -32,13 +32,19 @@ class FavoriteActivity : AppCompatActivity(){
             startActivity(intent)
         }
 
+        val backButton: ImageView = findViewById(R.id.buttonBack)
+        backButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun displayFavoriteStations() {
-        val userId = firebaseAuth.currentUser?.uid ?: return // Exit if not logged in
+        val userId = firebaseAuth.currentUser?.uid ?: return
 
-        val favoriteListLayout = findViewById<LinearLayout>(R.id.favoriteListLayout) // Get your layout
-        favoriteListLayout.removeAllViews() // Clear any existing items
+        val favoriteListLayout = findViewById<LinearLayout>(R.id.favoriteListLayout)
+        favoriteListLayout.removeAllViews()
 
         db.collection("favoriteStations").document(userId).get()
             .addOnSuccessListener { documentSnapshot ->
@@ -57,23 +63,20 @@ class FavoriteActivity : AppCompatActivity(){
                     textView.setPadding(60, 60, 20, 5)
                     favoriteListLayout.addView(textView)
 
-                    val iconListLayout = findViewById<LinearLayout>(R.id.iconListLayout) // Get your LinearLayout
-                    val iconImageView = ImageView(this)  // Create an ImageView
+                    val iconListLayout = findViewById<LinearLayout>(R.id.iconListLayout)
+                    val iconImageView = ImageView(this)
 
-                    // Set the image resource for the ImageView
                     val iconResourceId = R.drawable.fav
                     iconImageView.setImageResource(iconResourceId)
 
-                    // Customize the appearance of the ImageView (optional)
                     val layoutParams = LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.WRAP_CONTENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT
                     )
                     layoutParams.topMargin = 25
                     iconImageView.layoutParams = layoutParams
-                    iconImageView.scaleType = ImageView.ScaleType.CENTER_INSIDE // Adjust scaling as needed
+                    iconImageView.scaleType = ImageView.ScaleType.CENTER_INSIDE
 
-                    // Add the ImageView to the LinearLayout
                     iconListLayout.addView(iconImageView)
 
                 }

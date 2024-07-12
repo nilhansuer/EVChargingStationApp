@@ -34,6 +34,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_exit" />
 
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="46dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#A6FAF7F7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_media_rew" />
+
+
     <!-- Search Area -->
 
     <!-- Search Button -->

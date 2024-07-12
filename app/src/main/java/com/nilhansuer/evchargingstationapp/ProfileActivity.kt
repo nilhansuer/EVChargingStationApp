@@ -60,7 +60,6 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Set click listener for the Nearest Stations button
         nearestStationsButton.setOnClickListener {
             val intent = Intent(this, NearbyStationsActivity::class.java)
             startActivity(intent)

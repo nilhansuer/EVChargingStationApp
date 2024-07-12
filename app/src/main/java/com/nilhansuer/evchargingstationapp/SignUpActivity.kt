@@ -32,6 +32,12 @@ class SignUpActivity: AppCompatActivity(){
         val countrySpinner: Spinner = findViewById(R.id.countrySpinner)
         val countryList: ArrayList<String> = ArrayList()
 
+        val backButton: ImageView = findViewById(R.id.buttonBack)
+        backButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
         try {
             val assetManager: AssetManager = assets
             val inputStream = assetManager.open("country.txt")

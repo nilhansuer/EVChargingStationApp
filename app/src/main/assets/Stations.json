@@ -376,7 +376,7 @@
         "latitude": 40.978686,
         "longitude": 29.135011
       },
-      "activity": ["shopping", "restaurant", "fitness", "market", "spa"]
+      "activity": ["shopping", "yoga", "fitness", "market", "spa"]
     },
     {
       "id": 43,
@@ -394,7 +394,7 @@
         "latitude": 40.979905,
         "longitude": 29.130893
       },
-      "activity": ["shopping", "restaurant", "library", "museum", "theater"]
+      "activity": ["yoga", "restaurant", "library", "museum", "theater"]
     },
     {
       "id": 45,
@@ -421,7 +421,7 @@
         "latitude": 40.977568,
         "longitude": 29.139091
       },
-      "activity": ["shopping", "restaurant", "library", "workshop", "historicalsites"]
+      "activity": ["yoga", "restaurant", "library", "workshop", "historicalsites"]
     },
     {
       "id": 48,
@@ -439,7 +439,7 @@
         "latitude": 40.977318,
         "longitude": 29.144344
       },
-      "activity": ["shopping", "restaurant", "theater", "picnic", "spa"]
+      "activity": ["yoga", "restaurant", "theater", "picnic", "spa"]
     },
     {
       "id": 50,
@@ -544,8 +544,8 @@
       "id": 61,
       "name": "Station 61",
       "location": {
-        "latitude": 40.976546,
-        "longitude": 29.136383
+        "latitude": 40.876546,
+        "longitude": 29.336383
       },
       "activity": ["coffee", "restaurant", "playground", "market", "historicalsites"]
     },
@@ -553,7 +553,7 @@
       "id": 62,
       "name": "Station 62",
       "location": {
-        "latitude": 40.979173,
+        "latitude": 40.879173,
         "longitude": 29.132154
       },
       "activity": ["shopping", "sports", "picnic", "theater", "karaoke"]
@@ -563,7 +563,7 @@
       "name": "Station 63",
       "location": {
         "latitude": 40.978201,
-        "longitude": 29.117902
+        "longitude": 29.417902
       },
       "activity": ["coffee", "fitness", "walking", "hairstudio", "museum"]
     },
@@ -571,8 +571,8 @@
       "id": 64,
       "name": "Station 64",
       "location": {
-        "latitude": 40.979442,
-        "longitude": 29.143828
+        "latitude": 40.69442,
+        "longitude": 29.643828
       },
       "activity": ["coffee", "shopping", "restaurant", "spa", "concert"]
     },
@@ -581,7 +581,7 @@
       "name": "Station 65",
       "location": {
         "latitude": 40.977038,
-        "longitude": 29.122080
+        "longitude": 29.322080
       },
       "activity": ["shopping", "cinema", "library", "picnic", "theater"]
     },
@@ -590,7 +590,7 @@
       "name": "Station 66",
       "location": {
         "latitude": 40.978789,
-        "longitude": 29.125673
+        "longitude": 29.525673
       },
       "activity": ["coffee", "restaurant", "market", "fitness", "karaoke"]
     },
@@ -598,8 +598,8 @@
       "id": 67,
       "name": "Station 67",
       "location": {
-        "latitude": 40.978017,
-        "longitude": 29.137015
+        "latitude": 40.678017,
+        "longitude": 29.237015
       },
       "activity": ["shopping", "fitness", "playground", "museum", "yoga"]
     },
@@ -607,8 +607,8 @@
       "id": 68,
       "name": "Station 68",
       "location": {
-        "latitude": 40.977128,
-        "longitude": 29.118586
+        "latitude": 40.677128,
+        "longitude": 29.518586
       },
       "activity": ["coffee", "sports", "walking", "hairstudio", "market"]
     },
@@ -616,8 +616,8 @@
       "id": 69,
       "name": "Station 69",
       "location": {
-        "latitude": 40.978597,
-        "longitude": 29.126298
+        "latitude": 40.938597,
+        "longitude": 29.326298
       },
       "activity": ["shopping", "cinema", "library", "theater", "spa"]
     },
@@ -625,8 +625,8 @@
       "id": 70,
       "name": "Station 70",
       "location": {
-        "latitude": 40.976335,
-        "longitude": 29.134256
+        "latitude": 40.926335,
+        "longitude": 29.634256
       },
       "activity": ["coffee", "restaurant", "picnic", "market", "concert"]
     },
@@ -635,7 +635,7 @@
       "name": "Station 71",
       "location": {
         "latitude": 40.979734,
-        "longitude": 29.130075
+        "longitude": 29.430075
       },
       "activity": ["shopping", "cinema", "library", "meditation", "selfcare"]
     },
@@ -655,7 +655,7 @@
         "latitude": 40.978416,
         "longitude": 29.138514
       },
-      "activity": ["shopping", "fitness", "playground", "museum", "sp"]
+      "activity": ["shopping", "fitness", "playground", "museum", "spa"]
     },
     {
       "id": 74,
@@ -1798,14 +1798,14 @@
         "latitude": 40.967861,
         "longitude": 29.073136
       },
-      "activity": ["shopping", "cinema", "selfcare", "market", "karaoke"]
+      "activity": ["yoga", "cinema", "selfcare", "market", "karaoke"]
     },
     {
       "id": 201,
       "name": "Station 201",
       "location": {
         "latitude": 40.972345,
-        "longitude": 29.151890
+        "longitude": 29.111890
       },
       "activity": ["coffee", "fitness", "walking", "playground", "market"]
     },
@@ -1814,16 +1814,16 @@
       "name": "Station 202",
       "location": {
         "latitude": 40.972173,
-        "longitude": 29.151789
+        "longitude": 29.161789
       },
-      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+      "activity": ["yoga", "restaurant", "theater", "museum", "sports"]
     },
     {
       "id": 203,
       "name": "Station 203",
       "location": {
         "latitude": 40.972265,
-        "longitude": 29.152402
+        "longitude": 29.142402
       },
       "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
     },
@@ -1832,16 +1832,16 @@
       "name": "Station 204",
       "location": {
         "latitude": 40.972019,
-        "longitude": 29.151988
+        "longitude": 29.158988
       },
-      "activity": ["shopping", "restaurant", "library", "market", "concert"]
+      "activity": ["shopping", "yoga", "library", "market", "concert"]
     },
     {
       "id": 205,
       "name": "Station 205",
       "location": {
         "latitude": 40.972423,
-        "longitude": 29.152256
+        "longitude": 29.155256
       },
       "activity": ["coffee", "fitness", "walking", "playground", "market"]
     },
@@ -1850,7 +1850,7 @@
       "name": "Station 206",
       "location": {
         "latitude": 40.972148,
-        "longitude": 29.151687
+        "longitude": 29.133687
       },
       "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
     },
@@ -1859,16 +1859,16 @@
       "name": "Station 207",
       "location": {
         "latitude": 40.972359,
-        "longitude": 29.152118
+        "longitude": 29.122118
       },
-      "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
+      "activity": ["coffee", "fitness", "walking", "cinema", "hairstudio"]
     },
     {
       "id": 208,
       "name": "Station 208",
       "location": {
         "latitude": 40.972093,
-        "longitude": 29.151999
+        "longitude": 29.161999
       },
       "activity": ["shopping", "restaurant", "library", "fitness", "hairstudio"]
     },
@@ -1877,7 +1877,7 @@
       "name": "Station 209",
       "location": {
         "latitude": 40.972291,
-        "longitude": 29.152330
+        "longitude": 29.162330
       },
       "activity": ["coffee", "fitness", "walking", "playground", "market"]
     },
@@ -1886,16 +1886,16 @@
       "name": "Station 210",
       "location": {
         "latitude": 40.972134,
-        "longitude": 29.151874
+        "longitude": 29.121874
       },
-      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+      "activity": ["hairstudio", "restaurant", "theater", "museum", "sports"]
     },
     {
       "id": 211,
       "name": "Station 211",
       "location": {
         "latitude": 40.972245,
-        "longitude": 29.152256
+        "longitude": 29.134256
       },
       "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
     },
@@ -1904,7 +1904,7 @@
       "name": "Station 212",
       "location": {
         "latitude": 40.972079,
-        "longitude": 29.151952
+        "longitude": 29.159952
       },
       "activity": ["shopping", "restaurant", "library", "fitness", "concert"]
     },
@@ -1913,7 +1913,7 @@
       "name": "Station 213",
       "location": {
         "latitude": 40.972312,
-        "longitude": 29.152289
+        "longitude": 29.136289
       },
       "activity": ["coffee", "fitness", "walking", "playground", "market"]
     },
@@ -1922,16 +1922,16 @@
       "name": "Station 214",
       "location": {
         "latitude": 40.972165,
-        "longitude": 29.151760
+        "longitude": 29.172760
       },
-      "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
+      "activity": ["shopping", "hairstudio", "theater", "museum", "sports"]
     },
     {
       "id": 215,
       "name": "Station 215",
       "location": {
         "latitude": 40.972277,
-        "longitude": 29.152182
+        "longitude": 29.104182
       },
       "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
     },
@@ -1940,16 +1940,16 @@
       "name": "Station 216",
       "location": {
         "latitude": 40.972122,
-        "longitude": 29.151924
+        "longitude": 29.121924
       },
-      "activity": ["shopping", "restaurant", "library", "yoga", "pilates"]
+      "activity": ["hairstudio", "restaurant", "library", "yoga", "pilates"]
     },
     {
       "id": 217,
       "name": "Station 217",
       "location": {
         "latitude": 40.972334,
-        "longitude": 29.152261
+        "longitude": 29.112261
       },
       "activity": ["coffee", "fitness", "walking", "playground", "market"]
     },
@@ -1958,7 +1958,7 @@
       "name": "Station 218",
       "location": {
         "latitude": 40.972179,
-        "longitude": 29.151843
+        "longitude": 29.141843
       },
       "activity": ["shopping", "restaurant", "theater", "museum", "sports"]
     },
@@ -1967,16 +1967,16 @@
       "name": "Station 219",
       "location": {
         "latitude": 40.972290,
-        "longitude": 29.152276
+        "longitude": 29.132276
       },
-      "activity": ["coffee", "fitness", "walking", "cinema", "karaoke"]
+      "activity": ["coffee", "hairstudio", "walking", "cinema", "karaoke"]
     },
     {
       "id": 220,
       "name": "Station 220",
       "location": {
         "latitude": 40.972135,
-        "longitude": 29.151905
+        "longitude": 29.111905
       },
       "activity": ["shopping", "restaurant", "library", "pilates", "yoga"]
     }

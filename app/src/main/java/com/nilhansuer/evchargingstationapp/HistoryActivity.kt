@@ -31,6 +31,12 @@ class HistoryActivity: AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        val backButton: ImageView = findViewById(R.id.buttonBack)
+        backButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun displayHistory() {
@@ -44,7 +50,6 @@ class HistoryActivity: AppCompatActivity() {
 
             if (document != null && document.exists()) {
                 val historyMap = document.getData() ?: emptyMap()
-                // Iterate through the map entries, and then print the key (station) and value (activities)
                 historyMap.forEach { (stationName, activities) ->
                     val textView = TextView(this)
                     val parsedHistory = parseHistoryString(activities.toString())
@@ -59,7 +64,6 @@ class HistoryActivity: AppCompatActivity() {
 
             }
         }.addOnFailureListener { exception ->
-            // Handle Firebase fetch error (e.g., log or show a toast)
             Log.e("FirebaseError", "Error fetching history: $exception")
         }
     }
@@ -67,12 +71,12 @@ class HistoryActivity: AppCompatActivity() {
     fun parseHistoryString(historyString: String): String {
         val stationActivities = historyString.replace("{", "")
             .replace("}", "")
-            .split(", Station ") // Split on comma followed by "Station "
+            .split(", Station ")
 
         var i = 0
         var allHistory = ""
         val parsedEntries = stationActivities.map { entry ->
-            val parts = entry.split("=", limit = 2) // Split at most once on '='
+            val parts = entry.split("=", limit = 2)
             if (parts.size == 2) {
                 val stationName = parts[0]
                 val activities = parts[1]
@@ -83,27 +87,24 @@ class HistoryActivity: AppCompatActivity() {
                 }
                 i += 1
 
-                val iconListLayout = findViewById<LinearLayout>(R.id.iconListLayout) // Get your LinearLayout
-                val iconImageView = ImageView(this)  // Create an ImageView
+                val iconListLayout = findViewById<LinearLayout>(R.id.iconListLayout)
+                val iconImageView = ImageView(this)
 
-                // Set the image resource for the ImageView
                 val iconResourceId = R.drawable.ic_historylist
                 iconImageView.setImageResource(iconResourceId)
 
-                // Customize the appearance of the ImageView (optional)
                 val layoutParams = LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT
                 )
                 layoutParams.topMargin = 60
                 iconImageView.layoutParams = layoutParams
-                iconImageView.scaleType = ImageView.ScaleType.CENTER_INSIDE // Adjust scaling as needed
+                iconImageView.scaleType = ImageView.ScaleType.CENTER_INSIDE
 
-                // Add the ImageView to the LinearLayout
                 iconListLayout.addView(iconImageView)
 
             } else {
-                "" // Handle invalid entries (if any)
+                "" // Handle invalid entries
             }
         }
 
