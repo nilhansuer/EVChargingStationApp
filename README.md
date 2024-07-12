@@ -13,3 +13,5 @@
  and preferences of both the current user and the previous users who have visited the related
  charging stations. In addition, the application will be user-friendly, so that the users can easily
  access the application whenever they need.
+
+[interfaces.pdf](https://github.com/user-attachments/files/16192497/interfaces.pdf)
